@@ -1,28 +1,113 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="x-ua-compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    
-    <title>НМВ</title>
-    <link rel="icon" href="https://gitknu.github.io/b/favicon.ico" type="image/x-icon">
+	<title>ВЗЯО КНУ</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        <link rel="icon" href="https://gitknu.github.io/b/favicon.ico" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
 
     <style>
     model-viewer {
         width: 40vh;
         height: 40vh;
         margin: 0;
-        float: left; /* Align to the left */
+        float: right; /* Align to the left */
         border-radius: 50%; /* Add round border */
         border: 5px solid #a60b00; /* Add black border with 2px thickness */
     }
-    </style>
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+
+        background: linear-gradient(180deg, rgba(196,217,189,1) 0%, rgba(226,233,200,1) 10%, rgba(255,255,255,1) 31%, rgba(255,255,255,1) 100%);
+}
+
+
+#spin {
+  color:red;
+}
+#spin:after {
+  content:"";
+  animation: spin 60s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    content: "Реалізація заходів із забезпечення організації освітньої діяльності структурними підрозділами університету та її постійного вдосконалення відповідно до сучасних умов та досягнень науки і техніки.";
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    content: "Здійснення контролю за організацією освітньої діяльності структурними підрозділами університету.";
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    content: "Надання структурним підрозділам університету, науково-педагогічним, педагогічним працівникам і здобувачам освіти методичної та консультаційної допомоги з питань освітнього процесу.";
+    opacity: 0;
+  }
+}
+
+
+
+</style>
+<script>
+function myFunction() {
+  var x = document.getElementById("hide1");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+ var y = document.getElementById("hide2");
+  if (y.style.display === "none") {
+    y.style.display = "block";
+  } else {
+    y.style.display = "none";
+  }
+}
+
+
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
 </head>
 
 <body>
-    <div>Here's the website</div>
+  <!-- ***** Header Area End ***** -->
+<table>
+<tr>
+<td>
+<p style="text-align: left;">Що робить Навчально-методичний відділ? <br>У сферу наших функцій входить чимало обов'язків.
+<br><br><span id="spin" id="fadeIn"></span>
+</p>
+   </td>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+  </tr>
+<div></div>
     <div>
         <model-viewer id="orbit-demo" interpolation-decay="500" src="https://gitknu.github.io/knu3d_test/knu_beta_10_small_6.glb">
         </model-viewer>
