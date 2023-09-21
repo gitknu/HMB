@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    
+    <title>НМВ</title>
+    <link rel="icon" href="https://gitknu.github.io/b/favicon.ico" type="image/x-icon">
+
+    <style>
+    model-viewer {
+        width: 40vh;
+        height: 40vh;
+        margin: 0;
+        float: left; /* Align to the left */
+        border-radius: 50%; /* Add round border */
+        border: 5px solid #a60b00; /* Add black border with 2px thickness */
+    }
+    </style>
+</head>
+
+<body>
+    <div>Here's the website</div>
+    <div>
+        <model-viewer id="orbit-demo" interpolation-decay="500" src="https://gitknu.github.io/knu3d_test/knu_beta_10_small_6.glb">
+        </model-viewer>
+        <script>
+            (() => {
+                const modelViewer = document.querySelector('#orbit-demo');
+                const orbitCycle = [
+                    '-90deg 77deg 12m',
+                    '-60deg 75deg 12m',
+                    '-120deg 65deg 12m'
+                ];
+
+                setInterval(() => {
+                    const currentOrbitIndex = orbitCycle.indexOf(modelViewer.cameraOrbit);
+                    modelViewer.cameraOrbit =
+                        orbitCycle[(currentOrbitIndex + 1) % orbitCycle.length];
+                }, 9000);
+            })();
+        </script>
+    </div>
+</body>
+
+</html>
