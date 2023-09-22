@@ -109,15 +109,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   </tr>
 <div></div>
     <div>
-        <model-viewer id="orbit-demo" interpolation-decay="500" src="https://gitknu.github.io/HMB/knu_fog_2.glb">
+        <model-viewer id="orbit-demo" interpolation-decay="500" src="https://gitknu.github.io/HMB/knu_fog.glb">
         </model-viewer>
         <script>
             (() => {
                 const modelViewer = document.querySelector('#orbit-demo');
                 const orbitCycle = [
-                    '-90deg 77deg 1m',
-                    '-60deg 75deg 1m',
-                    '-120deg 65deg 1m'
+                    '-90deg 77deg 12m',
+                    '-60deg 75deg 12m',
+                    '-120deg 65deg 12m'
                 ];
 
                 setInterval(() => {
