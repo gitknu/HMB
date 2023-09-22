@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>НМВ КНУ</title>
+	<title>НМВ КНУ0</title>
         <meta charset="UTF-8">
         <meta http-equiv="x-ua-compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,16 +11,32 @@
         <link href="https://fonts.googleapis.com/css?family=Comfortaa&v1" rel="stylesheet">
 
     <style>
+Here's an example of how you can modify the CSS code to achieve this:
+
+model-viewer {
+    margin: 0;
+    float: right; /* Align to the left */
+    border-radius: 50%; /* Add round border */
+    border: 5px solid #a60b00; /* Add black border with 2px thickness */
+    background: rgb(164,164,164);
+    background: radial-gradient(circle, rgba(164,164,164,1) 0%, rgba(255,255,255,1) 54%, rgba(164,164,164,1) 100%);
+}
+
+/* Styles for vertical screen orientation */
+@media (orientation: portrait) {
     model-viewer {
-        width: 40vh;
-        height: 40vh;
-        margin: 0;
-        float: right; /* Align to the left */
-        border-radius: 50%; /* Add round border */
-        border: 5px solid #a60b00; /* Add black border with 2px thickness */
-	background: rgb(164,164,164);
-	background: radial-gradient(circle, rgba(164,164,164,1) 0%, rgba(255,255,255,1) 54%, rgba(164,164,164,1) 100%);
+        width: 20vw;
+        height: 20vh;
     }
+}
+
+/* Styles for horizontal screen orientation */
+@media (orientation: landscape) {
+    model-viewer {
+        width: 40vw;
+        height: 40vh;
+    }
+}
 
 html {
 	scroll-behavior: smooth;
