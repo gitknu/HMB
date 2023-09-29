@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>НМВ КНУ0</title>
+	<title>НМВ КНУ</title>
         <meta charset="UTF-8">
         <meta http-equiv="x-ua-compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-        <link rel="icon" href="https://gitknu.github.io/HMB/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
         <link href="https://fonts.googleapis.com/css?family=Comfortaa&v1" rel="stylesheet">
 
     <style>
-Here's an example of how you can modify the CSS code to achieve this:
 
 model-viewer {
-    margin: 0;
-    float: right; /* Align to the left */
-    border-radius: 50%; /* Add round border */
-    border: 5px solid #a60b00; /* Add black border with 2px thickness */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 10px;
+    border-radius: 50%;
+    border: 5px solid #a60b00;
     background: rgb(164,164,164);
     background: radial-gradient(circle, rgba(164,164,164,1) 0%, rgba(255,255,255,1) 54%, rgba(164,164,164,1) 100%);
 }
@@ -25,18 +26,28 @@ model-viewer {
 /* Styles for vertical screen orientation */
 @media (orientation: portrait) {
     model-viewer {
-        width: 20vw;
-        height: auto;
+        width: 40vw;
+        height: 40vw;
+    }
+    #spin {
+        position: fixed;
+        color: red;
     }
 }
 
 /* Styles for horizontal screen orientation */
 @media (orientation: landscape) {
     model-viewer {
-        width: 40vw;
-        height: auto;
+        width: 15vw;
+        height: 15vw;
+    }
+    #spin {
+        position: fixed;
+        width: 50%;
+        color: red;
     }
 }
+
 
 html {
 	scroll-behavior: smooth;
@@ -45,14 +56,9 @@ html {
 }
 
 body {
-
         background: linear-gradient(180deg, rgba(196,217,189,1) 0%, rgba(226,233,200,1) 10%, rgba(255,255,255,1) 31%, rgba(255,255,255,1) 100%);
-}
+    }
 
-
-#spin {
-  color:red;
-}
 #spin:after {
   content:"";
   animation: spin 60s linear infinite;
@@ -85,50 +91,14 @@ body {
   }
 }
 
-
-
 </style>
-<script>
-function myFunction() {
-  var x = document.getElementById("hide1");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
- var y = document.getElementById("hide2");
-  if (y.style.display === "none") {
-    y.style.display = "block";
-  } else {
-    y.style.display = "none";
-  }
-}
-
-
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-</script>
 </head>
 
 <body>
-  <!-- ***** Header Area End ***** -->
-<table>
-<tr>
-<td>
+
 <p style="text-align: left;"><b>Що робить Навчально-методичний відділ?</b> <br>У сферу наших функцій входить чимало обов'язків.
 <br><br><span id="spin" id="fadeIn"></span>
-</p>
-   </td>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
-  </tr>
-<div></div>
+
     <div>
         <model-viewer id="orbit-demo" interpolation-decay="500" src="https://gitknu.github.io/HMB/knu_fogger.glb">
         </model-viewer>
