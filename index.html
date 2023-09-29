@@ -11,6 +11,26 @@
     <link href="https://fonts.googleapis.com/css?family=Comfortaa&v1" rel="stylesheet">
 
     <style>
+header {
+  background: rgb(0,64,12);
+  background: linear-gradient(180deg, rgba(0,64,12,1) 0%, rgba(27,161,0,1) 35%, rgba(122,255,113,1) 100%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px); /* Adjust the blur value as needed */
+  z-index: -1;
+}
+
 
 model-viewer {
     position: fixed;
@@ -25,18 +45,27 @@ model-viewer {
 
 /* Styles for vertical screen orientation */
 @media (orientation: portrait) {
+    #logo_top {
+        width: 20vw;
+        height: 20vw;
+    }
+
     model-viewer {
         width: 40vw;
         height: 40vw;
     }
     #spin {
-        position: fixed;
         color: red;
     }
 }
 
 /* Styles for horizontal screen orientation */
 @media (orientation: landscape) {
+    #logo_top {
+        width: 15vw;
+        height: 15vw;
+    }
+
     model-viewer {
         width: 15vw;
         height: 15vw;
@@ -47,7 +76,6 @@ model-viewer {
         color: red;
     }
 }
-
 
 html {
 	scroll-behavior: smooth;
@@ -95,11 +123,14 @@ body {
 </head>
 
 <body>
-    <img src="path/to/logo.gif" alt="Logo" style="position: absolute; top: 10px; left: 10px; width: 50px; height: 50px;">
+  <header id="header">
+    <img id="logo_top" src="logo_nmv_compp.gif" alt="Logo" style="position: absolute; top: 10px; left: 10px;">
+  </header>
 
     <p style="text-align: left;"><b>Що робить Навчально-методичний відділ?</b> <br>У сферу наших функцій входить чимало обов'язків.
         <br><br><span id="spin" id="fadeIn"></span>
 
+<p>Lorem ipsum dolor sit amet</p>
     <div>
         <model-viewer id="orbit-demo" interpolation-decay="500" src="https://gitknu.github.io/HMB/knu_fogger.glb">
         </model-viewer>
@@ -119,6 +150,17 @@ body {
                 }, 9000);
             })();
         </script>
+
+<script>
+    const logoTop = document.querySelector('#logo_top');
+    
+    const logoTopHeight = logoTop.offsetHeight;
+    
+    const header = document.querySelector('#header');
+    
+    header.style.height = `${logoTopHeight}px`;
+</script>
+
     </div>
 </body>
 
