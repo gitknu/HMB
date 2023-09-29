@@ -45,6 +45,12 @@ model-viewer {
 
 /* Styles for vertical screen orientation */
 @media (orientation: portrait) {
+   .float {
+        font-size: 6vw;
+	width:20vw;
+	height:10vh;
+  }
+
     #logo_top {
         width: 20vw;
         height: 20vw;
@@ -61,6 +67,13 @@ model-viewer {
 
 /* Styles for horizontal screen orientation */
 @media (orientation: landscape) {
+   .float {
+	width:7vw;
+	height:9vh;
+        font-size: 2.5vh;
+  }
+
+
     #logo_top {
         width: 15vw;
         height: 15vw;
@@ -90,6 +103,19 @@ body {
 #spin:after {
   content:"";
   animation: spin 60s linear infinite;
+}
+
+.float {
+        text-decoration: none;
+	position:fixed;
+	bottom:50px;
+	right:20px;
+        opacity: 0.7;
+	background-color:white;
+	color:blue;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
 }
 
 @keyframes spin {
@@ -123,6 +149,9 @@ body {
 </head>
 
 <body>
+<a href="#top" class="float">
+<h2>▲</h2>
+</a>
   <header id="header">
     <img id="logo_top" src="logo_nmv_compp.gif" alt="Logo" style="position: absolute; top: 10px; left: 10px;">
   </header>
@@ -130,7 +159,15 @@ body {
     <p style="text-align: left;"><b>Що робить Навчально-методичний відділ?</b> <br>У сферу наших функцій входить чимало обов'язків.
         <br><br><span id="spin" id="fadeIn"></span>
 
-<p>Lorem ipsum dolor sit amet</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim nec odio sit amet malesuada. Nam convallis orci velit, nec blandit est eleifend in. Praesent dignissim maximus sem et euismod. Aenean sit amet finibus orci, vel tempor enim. Fusce euismod gravida ligula eu aliquet. Suspendisse at tristique sapien. Nullam fringilla lacus a facilisis tincidunt. Sed eu gravida massa, quis iaculis quam.
+
+Nullam laoreet purus dolor, ac iaculis odio luctus quis. Aliquam pellentesque quam justo, quis cursus tellus rhoncus sit amet. Donec tellus mauris, vulputate porttitor ante et, tempor rutrum massa. Pellentesque sed lorem a neque viverra venenatis. Ut hendrerit tellus at aliquam porttitor. Proin pulvinar eu felis in gravida. Donec venenatis finibus odio a venenatis.
+
+Aliquam eu lectus in justo vestibulum porttitor. In convallis, tellus sit amet gravida ornare, odio elit tincidunt mauris, pretium facilisis mauris neque non est. Proin quis ex elementum, tincidunt urna eget, finibus augue. Donec vel convallis odio, quis efficitur tellus. Donec at lectus eros. Nulla ut ligula nisl. Aenean sed gravida ante. Proin semper eget orci sit amet pulvinar. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis pharetra nunc ipsum, et gravida nulla tempus sed. Integer vel sapien a purus pellentesque interdum. In aliquam sit amet arcu iaculis ornare. Ut luctus neque non nulla luctus, sit amet euismod tortor maximus.
+
+Morbi et urna dapibus, eleifend lacus vitae, consectetur quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut eleifend justo sit amet aliquet sagittis. Maecenas blandit lacinia nisi id finibus. Vestibulum rutrum sollicitudin dapibus. Cras eu lorem nunc. Nam accumsan venenatis leo ac feugiat. Suspendisse potenti.
+
+Sed porta rutrum massa, non aliquet ante. Nunc bibendum tincidunt eros ut viverra. Nullam magna nunc, porta et orci at, rutrum hendrerit urna. Duis pellentesque arcu erat, non vehicula tellus ullamcorper sed. Cras facilisis, arcu a fringilla tempor, lacus ipsum bibendum quam, id consectetur lacus dolor ut purus. Fusce dolor turpis, pharetra non dui vitae, mollis imperdiet neque. Cras nec imperdiet sem. Aenean a ultrices sapien. Mauris urna orci, sagittis egestas mauris sit amet, cursus tristique justo. Vestibulum eu nulla massa. Vestibulum eleifend iaculis felis, a egestas lectus consectetur eu.</p>
     <div>
         <model-viewer id="orbit-demo" interpolation-decay="500" src="https://gitknu.github.io/HMB/knu_fogger.glb">
         </model-viewer>
