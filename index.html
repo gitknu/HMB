@@ -40,7 +40,6 @@
     }
     
     .header-link {
-      font-size: 2vh;
       color: blue;
       text-decoration: none;
     }
@@ -62,6 +61,10 @@ model-viewer {
 
 /* Styles for vertical screen orientation */
 @media (orientation: portrait) {
+    .header-link {
+      font-size: 2vh;
+    }
+
    .float {
         font-size: 6vw;
 	width:20vw;
@@ -84,6 +87,10 @@ model-viewer {
 
 /* Styles for horizontal screen orientation */
 @media (orientation: landscape) {
+    .header-link {
+      font-size: 4vh;
+    }
+
    .float {
 	width:7vw;
 	height:9vh;
