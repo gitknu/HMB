@@ -11,26 +11,36 @@
     <link href="https://fonts.googleapis.com/css?family=Comfortaa&v1" rel="stylesheet">
 
     <style>
-header {
-  background: rgb(0,64,12);
-  background: linear-gradient(180deg, rgba(0,64,12,1) 0%, rgba(27,161,0,1) 35%, rgba(122,255,113,1) 100%);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
-  overflow: hidden;
-  width: 100%;
-}
+ header {
+        background: rgb(0,64,12);
+        background: linear-gradient(180deg, rgba(0,64,12,1) 0%, rgba(27,161,0,1) 35%, rgba(122,255,113,1) 100%);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
+        overflow: hidden;
+        width: 100%;
+    }
 
-header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(10px); /* Adjust the blur value as needed */
-  z-index: -1;
-}
+    header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(10px); /* Adjust the blur value as needed */
+        z-index: -1;
+    }
 
+    .header-link {
+        color: black;
+        text-decoration: none;
+        margin-left: 10px;
+        transition: color 0.3s;
+    }
+
+    .header-link:hover {
+        color: blue;
+    }
 
 model-viewer {
     position: fixed;
@@ -154,20 +164,15 @@ body {
 </a>
   <header id="header">
     <img id="logo_top" src="logo_nmv_compp.gif" alt="Logo" style="position: absolute; top: 10px; left: 10px;">
+  <a href="https://www.google.com" class="header-link">Новини</a>
+  <a href="https://www.google.com" class="header-link">Документи</a>
+  <a href="https://www.google.com" class="header-link">Інше</a>
   </header>
 
     <p style="text-align: left;"><b>Що робить Навчально-методичний відділ?</b> <br>У сферу наших функцій входить чимало обов'язків.
         <br><br><span id="spin" id="fadeIn"></span>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim nec odio sit amet malesuada. Nam convallis orci velit, nec blandit est eleifend in. Praesent dignissim maximus sem et euismod. Aenean sit amet finibus orci, vel tempor enim. Fusce euismod gravida ligula eu aliquet. Suspendisse at tristique sapien. Nullam fringilla lacus a facilisis tincidunt. Sed eu gravida massa, quis iaculis quam.
-
-Nullam laoreet purus dolor, ac iaculis odio luctus quis. Aliquam pellentesque quam justo, quis cursus tellus rhoncus sit amet. Donec tellus mauris, vulputate porttitor ante et, tempor rutrum massa. Pellentesque sed lorem a neque viverra venenatis. Ut hendrerit tellus at aliquam porttitor. Proin pulvinar eu felis in gravida. Donec venenatis finibus odio a venenatis.
-
-Aliquam eu lectus in justo vestibulum porttitor. In convallis, tellus sit amet gravida ornare, odio elit tincidunt mauris, pretium facilisis mauris neque non est. Proin quis ex elementum, tincidunt urna eget, finibus augue. Donec vel convallis odio, quis efficitur tellus. Donec at lectus eros. Nulla ut ligula nisl. Aenean sed gravida ante. Proin semper eget orci sit amet pulvinar. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis pharetra nunc ipsum, et gravida nulla tempus sed. Integer vel sapien a purus pellentesque interdum. In aliquam sit amet arcu iaculis ornare. Ut luctus neque non nulla luctus, sit amet euismod tortor maximus.
-
-Morbi et urna dapibus, eleifend lacus vitae, consectetur quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut eleifend justo sit amet aliquet sagittis. Maecenas blandit lacinia nisi id finibus. Vestibulum rutrum sollicitudin dapibus. Cras eu lorem nunc. Nam accumsan venenatis leo ac feugiat. Suspendisse potenti.
-
-Sed porta rutrum massa, non aliquet ante. Nunc bibendum tincidunt eros ut viverra. Nullam magna nunc, porta et orci at, rutrum hendrerit urna. Duis pellentesque arcu erat, non vehicula tellus ullamcorper sed. Cras facilisis, arcu a fringilla tempor, lacus ipsum bibendum quam, id consectetur lacus dolor ut purus. Fusce dolor turpis, pharetra non dui vitae, mollis imperdiet neque. Cras nec imperdiet sem. Aenean a ultrices sapien. Mauris urna orci, sagittis egestas mauris sit amet, cursus tristique justo. Vestibulum eu nulla massa. Vestibulum eleifend iaculis felis, a egestas lectus consectetur eu.</p>
+<p>Lorem ipsum dolor sit amet </p>
     <div>
         <model-viewer id="orbit-demo" interpolation-decay="500" src="https://gitknu.github.io/HMB/knu_fogger.glb">
         </model-viewer>
