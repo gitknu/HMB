@@ -6,7 +6,7 @@
     <meta http-equiv="x-ua-compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="afiles_imgs/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa&v1" rel="stylesheet">
 
@@ -33,10 +33,11 @@
 
 .header-buttons {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-evenly;
       align-items: center;
       list-style: none;
-      padding: 0;
+      padding: 5;
+      margin: auto;
     }
     
     .header-link {
@@ -51,8 +52,26 @@
 :link { color: white; }
 :visited { color: white; }
 
+ #table {
+  width: 100%;
+  }
+
+ .rounded-image {
+    border-radius: 50%;
+        width: 15vw;
+        height: 15vw;
+  }
+
+  .main-column {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .else-columns {
+    text-align: center;
+  }
+
 model-viewer {
-    position: fixed;
     bottom: 0;
     left: 0;
     margin: 10px;
@@ -64,6 +83,10 @@ model-viewer {
 
 /* Styles for vertical screen orientation */
 @media (orientation: portrait) {
+    .header-buttons {
+      width: 90%;
+    }
+
     .header-link {
       font-size: 1.5vh;
     }
@@ -83,13 +106,14 @@ model-viewer {
         width: 40vw;
         height: 40vw;
     }
-    #spin {
-        color: red;
-    }
 }
 
 /* Styles for horizontal screen orientation */
-@media (orientation: landscape) {
+  @media screen and (orientation: landscape){
+    .header-buttons {
+      width: 97%;
+    }
+
     .header-link {
       font-size: 4vh;
     }
@@ -110,11 +134,6 @@ model-viewer {
         width: 15vw;
         height: 15vw;
     }
-    #spin {
-        position: fixed;
-        width: 50%;
-        color: red;
-    }
 }
 
 html {
@@ -127,10 +146,6 @@ body {
         background: linear-gradient(180deg, rgba(196,217,189,1) 0%, rgba(226,233,200,1) 10%, rgba(255,255,255,1) 31%, rgba(255,255,255,1) 100%);
     }
 
-#spin:after {
-  content:"";
-  animation: spin 60s linear infinite;
-}
 
 .float {
         text-decoration: none;
@@ -143,6 +158,25 @@ body {
 	border-radius:50px;
 	text-align:center;
 	box-shadow: 2px 2px 3px #999;
+}
+
+#table_land {
+       }
+
+td {
+  border-radius: 20px;
+	border: 1px solid black; 
+}
+
+    #spin {
+        height: 20vh;
+        color: red;
+        display: block;
+    }
+
+#spin:after {
+  content:"";
+  animation: spin 60s linear infinite;
 }
 
 @keyframes spin {
@@ -180,10 +214,10 @@ body {
 <h2>▲</h2>
 </a>
   <header id="header">
-    <img id="logo_top" src="logo_nmv_compp.gif" alt="Logo" style="position: absolute; top: 10px; left: 10px;">
+    <img id="logo_top" src="afiles_imgs/logo_nmv_compp.gif" alt="Logo" style="position: absolute; top: 10px; left: 10px;">
 
 <ul class="header-buttons">
-  <li><a href="https://gitknu.github.io/HMB/" class="header-link">______</a></li>
+  <li><a href="https://gitknu.github.io/HMB/" class="header-link">ㅤㅤㅤㅤㅤ</a></li>
   <li><a href="https://gitknu.github.io/HMB/news" class="header-link">НОВИНИ</a></li>
   <li><a href="https://gitknu.github.io/HMB/docs" class="header-link">ДОКУМЕНТИ</a></li>
   <li><a href="https://gitknu.github.io/HMB/else" class="header-link">ІНШЕ</a></li>
@@ -192,11 +226,137 @@ body {
   </header>
 
     <p style="text-align: left;"><b>Що робить Навчально-методичний відділ?</b> <br>У сферу наших функцій входить чимало обов'язків.
-        <br><br><span id="spin" id="fadeIn"></span>
+        <br><br>
+<div id="spin-wrap">
+<span id="spin"></span>
+</div>
 
 <p>Lorem ipsum dolor sit amet </p>
+
+<table id="table_land">
+  <tr>
+    <td class="main-column">
+      <img src="afiles_imgs/pyzhyk_a_m.png" class="rounded-image">
+      <p>Пижик Андрій Миколайович</p>
+    </td>
+     <td class="else-columns">
+      <p><b>Директор НМВ</b></p>
+    </td>
+    <td class="else-columns">
+      <p>+38(044)239-32-50</p>
+      <p>pyzhyk@knu.ua</p>
+    </td>
+    <td class="else-columns">
+      <p>кабінет 217</p>
+      <p>(Головний корпус)</p>
+    </td>
+  </tr>
+  <tr>
+    <td class="main-column">
+      <img src="afiles_imgs/vavronevych_a_m.png" class="rounded-image">
+      <p>Вавроневич Катерина Євгенівна</p>
+    </td>
+     <td class="else-columns">
+      <p>Інженер I категорії</p>
+    </td>
+    <td class="else-columns">
+      <p>+38(044)239-34-42</p>
+      <p>vavronevych@knu.ua</p>
+    </td>
+    <td class="else-columns">
+      <p>кабінет 104-А</p>
+      <p>(Головний корпус)</p>
+    </td>
+  </tr>
+  <tr>
+    <td class="main-column">
+      <img src="afiles_imgs/vlasova_a_m.png" class="rounded-image">
+      <p>Власова Наталія Василівна</p>
+    </td>
+     <td class="else-columns">
+      <p>Методист І категорії</p>
+    </td>
+    <td class="else-columns">
+      <p>+38(044)239-32-42</p>
+      <p>(пошта?)</p>
+    </td>
+    <td class="else-columns">
+      <p>кабінет 104-Б</p>
+      <p>(Головний корпус)</p>
+    </td>
+  </tr>
+  <tr>
+    <td class="main-column">
+      <img src="afiles_imgs/soloviova_a_m.png" class="rounded-image">
+      <p>Соловйова Ірина Вікторівна</p>
+    </td>
+     <td class="else-columns">
+      <p>Методист вищої категорії</p>
+    </td>
+    <td class="else-columns">
+      <p>+38(044)239-33-01</p>
+      <p>isoloviova@ukr.net</p>
+    </td>
+    <td class="else-columns">
+      <p>кабінет 319</p>
+      <p>(Головний корпус)</p>
+    </td>
+  </tr>
+  <tr>
+    <td class="main-column">
+      <img src="afiles_imgs/churiumova_a_m.png" class="rounded-image">
+      <p>Чурюмова Тетяна Климівна</p>
+    </td>
+     <td class="else-columns">
+      <p>Методист вищої категорії</p>
+    </td>
+    <td class="else-columns">
+      <p>+38(044)239-34-42</p>
+      <p>(пошта?)</p>
+    </td>
+    <td class="else-columns">
+      <p>кабінет 104-Б</p>
+      <p>(Головний корпус)</p>
+    </td>
+  </tr>
+  <tr>
+    <td class="main-column">
+      <img src="afiles_imgs/kravchenkp_a_m.png" class="rounded-image">
+      <p>Кравченко Катерина Василівна</p>
+    </td>
+     <td class="else-columns">
+      <p>Методист І категорії</p>
+    </td>
+    <td class="else-columns">
+      <p>+38(044)239-33-01</p>
+      <p>kateryna.kravchenko@knu.ua</p>
+    </td>
+    <td class="else-columns">
+      <p>кабінет 318</p>
+      <p>(Головний корпус)</p>
+    </td>
+  </tr>
+  <tr>
+    <td class="main-column">
+      <img src="afiles_imgs/rudzik_a_m.png" class="rounded-image">
+      <p>Рудзік Лариса Юріївна</p>
+    </td>
+     <td class="else-columns">
+      <p>Методист І категорії</p>
+    </td>
+    <td class="else-columns">
+      <p>+38(044)239-32-42</p>
+      <p>lrmetod@ukr.net</p>
+    </td>
+    <td class="else-columns">
+      <p>кабінет 104-Б</p>
+      <p>(Головний корпус)</p>
+    </td>
+  </tr>
+</table>
+
     <div>
-        <model-viewer id="orbit-demo" interpolation-decay="500" src="https://gitknu.github.io/HMB/knu_fogger.glb">
+        <model-viewer id="orbit-demo" interpolation-decay="500" src="https://gitknu.github.io/HMB/afiles_imgs/knu_fogger.glb">
         </model-viewer>
         <script>
             (() => {
