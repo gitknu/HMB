@@ -49,8 +49,8 @@
       color: red;
     }
 
-:link { color: white; }
-:visited { color: white; }
+:link { color: black; text-decoration: none;}
+:visited { color: black; text-decoration: none;}
 
  #table {
   width: 100%;
@@ -58,8 +58,6 @@
 
  .rounded-image {
     border-radius: 50%;
-        width: 15vw;
-        height: 15vw;
   }
 
   .main-column {
@@ -106,6 +104,27 @@ model-viewer {
         width: 30vw;
         height: 30vw;
     }
+
+ .rounded-image {
+        width: 70vw;
+        height: 70vw;
+  }
+
+    #table_port {
+    display: block;
+    width: 100%;
+    }
+
+    #table_land {
+    display: none;
+    }
+
+    td {
+        border-radius: 40px;
+    border: none;
+    box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.5);
+    }
+
 }
 
 /* Styles for horizontal screen orientation */
@@ -134,6 +153,26 @@ model-viewer {
         width: 15vw;
         height: 15vw;
     }
+
+ .rounded-image {
+        width: 15vw;
+        height: 15vw;
+  }
+
+    #table_port {
+    display: none;
+    }
+
+    #table_land {
+    display: block;
+    }
+
+    td {
+        border-radius: 40px;
+    border: none;
+    box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.5);
+    }
+
 }
 
 html {
@@ -158,14 +197,6 @@ body {
 	border-radius:50px;
 	text-align:center;
 	box-shadow: 2px 2px 3px #999;
-}
-
-#table_land {
-       }
-
-td {
-  border-radius: 20px;
-	border: 1px solid black; 
 }
 
     #spin {
@@ -232,6 +263,79 @@ td {
 </div>
 
 <p>Lorem ipsum dolor sit amet </p>
+
+<table id="table_port">
+  <tr>
+    <td class="main-column">
+      <img src="afiles_imgs/pyzhyk_a_m.png" class="rounded-image">
+      <p>Пижик Андрій Миколайович</p>
+      <h2><b>Директор НМВ</b></h2> 
+      <h2><a href="tel:+38(044)123">📞ㅤ</a>
+      <a href="mailto:a@a.a">ㅤ📧ㅤ</a>
+      <a href="google.com">ㅤ📍 (к. 217)</a></h2> 
+    </td>
+  </tr>
+  <tr>
+<td class="main-column">
+      <img src="afiles_imgs/vavronevych_a_m.png" class="rounded-image">
+      <p>Вавроневич Катерина Євгенівна</p>
+      <h2><b>Інженер I категорії</b></h2> 
+      <h2><a href="tel:+38(044)123">📞ㅤ</a>
+      <a href="mailto:a@a.a">ㅤ📧ㅤ</a>
+      <a href="google.com">ㅤ📍 (к. 217)</a></h2> 
+    </td>
+  </tr>
+  <tr>
+<td class="main-column">
+      <img src="afiles_imgs/vlasova_a_m.png" class="rounded-image">
+      <p>Власова Наталія Василівна</p>
+      <h2><b>Методист І категорії</b></h2> 
+      <h2><a href="tel:+38(044)123">📞ㅤ</a>
+      <a href="mailto:a@a.a">ㅤ📧ㅤ</a>
+      <a href="google.com">ㅤ📍 (к. 217)</a></h2> 
+    </td>
+  </tr>
+  <tr>
+<td class="main-column">
+      <img src="afiles_imgs/soloviova_a_m.png" class="rounded-image">
+      <p>Соловйова Ірина Вікторівна</p>
+      <h2><b>Методист вищої категорії</b></h2> 
+      <h2><a href="tel:+38(044)123">📞ㅤ</a>
+      <a href="mailto:a@a.a">ㅤ📧ㅤ</a>
+      <a href="google.com">ㅤ📍 (к. 217)</a></h2> 
+    </td>
+  </tr>
+  <tr>
+<td class="main-column">
+      <img src="afiles_imgs/churiumova_a_m.png" class="rounded-image">
+      <p>Чурюмова Тетяна Климівна</p>
+      <h2><b>Методист вищої категорії</b></h2> 
+      <h2><a href="tel:+38(044)123">📞ㅤ</a>
+      <a href="mailto:a@a.a">ㅤ📧ㅤ</a>
+      <a href="google.com">ㅤ📍 (к. 217)</a></h2> 
+    </td>
+  </tr>
+  <tr>
+<td class="main-column">
+      <img src="afiles_imgs/kravchenkp_a_m.png" class="rounded-image">
+      <p>Кравченко Катерина Василівна</p>
+      <h2><b>Методист І категорії</b></h2> 
+      <h2><a href="tel:+38(044)123">📞ㅤ</a>
+      <a href="mailto:a@a.a">ㅤ📧ㅤ</a>
+      <a href="google.com">ㅤ📍 (к. 217)</a></h2> 
+    </td>
+  </tr>
+  <tr>
+<td class="main-column">
+      <img src="afiles_imgs/rudzik_a_m.png" class="rounded-image">
+      <p>Рудзік Лариса Юріївна</p>
+      <h2><b>Методист І категорії</b></h2> 
+      <h2><a href="tel:+38(044)123">📞ㅤ</a>
+      <a href="mailto:a@a.a">ㅤ📧ㅤ</a>
+      <a href="google.com">ㅤ📍 (к. 217)</a></h2> 
+    </td>
+  </tr>
+</table>
 
 <table id="table_land">
   <tr>
