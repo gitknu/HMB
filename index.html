@@ -244,6 +244,7 @@ body {
 <a href="#top" class="float">
 <h2>▲</h2>
 </a>
+<h4 id="hide1"><i style="color: #e3e3e3;">Перейти на стару версію сайту </i> ( 🚦 ⤵ 🚥 )</h4><button id="hide2" onclick="myFunction()">Мене все влаштовує 👌</button>
   <header id="header">
     <img id="logo_top" src="afiles_imgs/logo_nmv_compp.gif" alt="Logo" style="position: absolute; top: 10px; left: 10px;">
 
@@ -487,6 +488,34 @@ body {
     const header = document.querySelector('#header');
     
     header.style.height = `${logoTopHeight}px`;
+</script>
+<script>
+function myFunction() {
+  var x = document.getElementById("hide1");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+ var y = document.getElementById("hide2");
+  if (y.style.display === "none") {
+    y.style.display = "block";
+  } else {
+    y.style.display = "none";
+  }
+}
+
+
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
 </script>
 
     </div>
