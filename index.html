@@ -289,6 +289,16 @@ body {
       <h3><a href="tel:+38(044)239-32-50">📞ㅤ</a>
       <a href="mailto:pyzhyk@knu.ua">ㅤ📧ㅤ</a>
       <a href="google.com">ㅤ📍 (к. 217)</a></h3> 
+      <p>
+      <span onclick="copyToClipboard('phone_copy_pyzhyk')">📋</span> 
+      <span onclick="copyToClipboard('mail_copy_pyzhyk')">📋</span> 
+      <span onclick="copyToClipboard('place_copy_pyzhyk')">📋</span>
+      </p>
+      <div style="display: none;">
+      <span id="phone_copy_pyzhyk">+38(044)239-32-50</span>
+      <span id="mail_copy_pyzhyk">pyzhyk@knu.ua</span>
+      <span id="place_copy_pyzhyk">вул. Володимирська, 60. Кабінет 217</span>
+  </div>
     </td>
   </tr>
   <tr>
@@ -530,6 +540,22 @@ function myFunction() {
   }
 }
 </script>
+
+ <script>
+    function copyToClipboard(elementId) {
+      var text = document.getElementById(elementId).innerText;
+      var input = document.createElement("input");
+      input.style.position = "fixed";
+      input.style.opacity = 0;
+      input.value = text;
+      document.body.appendChild(input);
+      input.select();
+      input.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      document.body.removeChild(input);
+      alert("'" + text + "'" + " скопійовано!");
+    }
+  </script>
 
     </div>
 </body>
