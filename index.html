@@ -251,6 +251,41 @@ body {
   }
 }
 
+.qr_hover {
+    position: relative;
+    display: inline-block;
+}
+
+.qr_hover .qr_phone_pyzhyk {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+}
+
+.qr_hover:hover .qr_phone_pyzhyk {
+    visibility: visible;
+}
+
+.qr_hover .qr_mail_pyzhyk {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+}
+
+.qr_hover:hover .qr_mail_pyzhyk {
+    visibility: visible;
+}
+
+.qr_hover .qr_map_pyzhyk {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+}
+
+.qr_hover:hover .qr_map_pyzhyk {
+    visibility: visible;
+}
+
  </style>
 </head>
 
@@ -484,12 +519,22 @@ body {
       <p title="організовує роботу відділу та очолює його"><b>директор НМВ</b></p>
     </td>
     <td class="else-columns">
-      <p><a href="tel:+38(044)239-32-50">+38(044)239-32-50</a></p>
-      <p><a href="mailto:pyzhyk@knu.ua">pyzhyk@knu.ua</a></p>
+      <p><div class="qr_hover"><a href="tel:+38(044)239-32-50">+38(044)239-32-50</a>
+       <span class="qr_phone_pyzhyk">
+      <img src="/afiles_imgs/qr.png" />
+     </span></p>
+     </div>
+      <p><div class="qr_hover"><a href="mailto:pyzhyk@knu.ua">pyzhyk@knu.ua</a>
+       <span class="qr_mail_pyzhyk">
+      <img src="/afiles_imgs/qr.png" />
+     </span></p>
     </td>
     <td class="else-columns" style="width:27%;">
-      <p>кабінет 217</p>
+      <div class="qr_hover"><p>кабінет 217</p>
       <p>(Головний корпус)</p>
+      <span class="qr_map_pyzhyk">
+      <img src="/afiles_imgs/qr.png" />
+     </span>
     </td>
   </tr>
   <tr>
@@ -501,12 +546,22 @@ body {
       <p title="фахівець із питань чогось неймовірно важливого">інженер I-ї категорії</p>
     </td>
     <td class="else-columns">
-      <p><a href="tel:+38(044)239-34-42">+38(044)239-34-42</a></p>
-      <p><a href="mailto:vavronevych@knu.ua">vavronevych@knu.ua</a></p>
+            <p><div class="qr_hover"><a href="tel:+38(044)239-34-42">+38(044)239-34-42</a>
+       <span class="qr_phone_pyzhyk">
+      <img src="/afiles_imgs/qr.png" />
+     </span></p>
+     </div>
+      <p><div class="qr_hover"><a href="mailto:vavronevych@knu.ua">vavronevych@knu.ua</a>
+       <span class="qr_mail_pyzhyk">
+      <img src="/afiles_imgs/qr.png" />
+     </span></p>
     </td>
-    <td class="else-columns">
-      <p>кабінет 104-А</p>
+    <td class="else-columns" style="width:27%;">
+      <div class="qr_hover"><p>кабінет 104-А</p>
       <p>(Головний корпус)</p>
+      <span class="qr_map_pyzhyk">
+      <img src="/afiles_imgs/qr.png" />
+     </span>
     </td>
   </tr>
   <tr>
@@ -518,12 +573,22 @@ body {
       <p title="фахівець із питань чогось неймовірно важливого">методист I-ї категорії</p>
     </td>
     <td class="else-columns">
-      <p><a href="tel:+38(044)239-34-42">+38(044)239-32-42</a></p>
-      <p><a href="mailto:a@a.a">(пошта?)</a></p>
+              <p><div class="qr_hover"><a href="tel:+38(044)239-32-42">+38(044)239-32-42</a>
+       <span class="qr_phone_pyzhyk">
+      <img src="/afiles_imgs/qr.png" />
+     </span></p>
+     </div>
+      <p><div class="qr_hover"><a href="mailto:mail@knu.ua">mail@knu.ua</a>
+       <span class="qr_mail_pyzhyk">
+      <img src="/afiles_imgs/qr.png" />
+     </span></p>
     </td>
-    <td class="else-columns">
-      <p>кабінет 104-Б</p>
+    <td class="else-columns" style="width:27%;">
+      <div class="qr_hover"><p>кабінет 104-Б</p>
       <p>(Головний корпус)</p>
+      <span class="qr_map_pyzhyk">
+      <img src="/afiles_imgs/qr.png" />
+     </span>
     </td>
   </tr>
   <tr>
@@ -535,29 +600,49 @@ body {
       <p title="фахівець із питань чогось неймовірно важливого">методист вищої категорії</p>
     </td>
     <td class="else-columns">
-      <p><a href="tel:+38(044)239-33-01">+38(044)239-33-01</a></p>
-      <p><a href="mailto:isoloviova@ukr.net">isoloviova@ukr.net</a></p>
+              <p><div class="qr_hover"><a href="tel:+38(044)239-33-01">+38(044)239-33-01</a>
+       <span class="qr_phone_pyzhyk">
+      <img src="/afiles_imgs/qr.png" />
+     </span></p>
+     </div>
+      <p><div class="qr_hover"><a href="mailto:isoloviova@ukr.net">isoloviova@ukr.net</a>
+       <span class="qr_mail_pyzhyk">
+      <img src="/afiles_imgs/qr.png" />
+     </span></p>
     </td>
-    <td class="else-columns">
-      <p>кабінет 319</p>
+    <td class="else-columns" style="width:27%;">
+      <div class="qr_hover"><p>кабінет 319</p>
       <p>(Головний корпус)</p>
+      <span class="qr_map_pyzhyk">
+      <img src="/afiles_imgs/qr.png" />
+     </span>
     </td>
   </tr>
   <tr>
     <td class="main-column">
       <img src="afiles_imgs/churiumova_a_m.jpg" class="rounded-image">
       <p title="фахівець із питань чогось неймовірно важливого">Чурюмова Тетяна Климівна</p>
-    </td>
+ </td>
      <td class="else-columns">
       <p title="фахівець із питань чогось неймовірно важливого">методист вищої категорії</p>
     </td>
-    <td class="else-columns">
-      <p><a href="tel:+38(044)239-34-42">+38(044)239-34-42</a></p>
-      <p><a href="mailto:a@a.a">(пошта?)</a></p>
+     <td class="else-columns">
+               <p><div class="qr_hover"><a href="tel:+38(044)239-34-42">+38(044)239-34-42</a>
+       <span class="qr_phone_pyzhyk">
+      <img src="/afiles_imgs/qr.png" />
+     </span></p>
+     </div>
+      <p><div class="qr_hover"><a href="mailto:mail@knu.ua">mail@knu.ua</a>
+       <span class="qr_mail_pyzhyk">
+      <img src="/afiles_imgs/qr.png" />
+     </span></p>
     </td>
-    <td class="else-columns">
-      <p>кабінет 104-Б</p>
+    <td class="else-columns" style="width:27%;">
+      <div class="qr_hover"><p>кабінет 104-Б</p>
       <p>(Головний корпус)</p>
+      <span class="qr_map_pyzhyk">
+      <img src="/afiles_imgs/qr.png" />
+     </span>
     </td>
   </tr>
   <tr>
@@ -569,12 +654,22 @@ body {
       <p title="фахівець із питань чогось неймовірно важливого">методист I-ї категорії</p>
     </td>
     <td class="else-columns">
-      <p><a href="tel:+38(044)239-33-01">+38(044)239-33-01</a></p>
-      <p><a href="mailto:kateryna.kravchenko@knu.ua">kateryna.kravchenko@knu.ua</a></p>
+                     <p><div class="qr_hover"><a href="tel:+38(044)239-33-01">+38(044)239-33-01</a>
+       <span class="qr_phone_pyzhyk">
+      <img src="/afiles_imgs/qr.png" />
+     </span></p>
+     </div>
+      <p><div class="qr_hover"><a href="mailto:kateryna.kravchenko@knu.ua">kateryna.kravchenko@knu.ua</a>
+       <span class="qr_mail_pyzhyk">
+      <img src="/afiles_imgs/qr.png" />
+     </span></p>
     </td>
-    <td class="else-columns">
-      <p>кабінет 318</p>
+    <td class="else-columns" style="width:27%;">
+      <div class="qr_hover"><p>кабінет 318</p>
       <p>(Головний корпус)</p>
+      <span class="qr_map_pyzhyk">
+      <img src="/afiles_imgs/qr.png" />
+     </span>
     </td>
   </tr>
   <tr>
@@ -586,12 +681,22 @@ body {
       <p title="фахівець із питань чогось неймовірно важливого">методист I-ї категорії</p>
     </td>
     <td class="else-columns">
-      <p><a href="tel:+38(044)239-32-42">+38(044)239-32-42</a></p>
-      <p><a href="mailto:lrmetod@ukr.net">lrmetod@ukr.net</a></p>
+                           <p><div class="qr_hover"><a href="tel:+38(044)239-32-42">+38(044)239-32-42</a>
+       <span class="qr_phone_pyzhyk">
+      <img src="/afiles_imgs/qr.png" />
+     </span></p>
+     </div>
+      <p><div class="qr_hover"><a href="mailto:lrmetod@ukr.net">lrmetod@ukr.net</a>
+       <span class="qr_mail_pyzhyk">
+      <img src="/afiles_imgs/qr.png" />
+     </span></p>
     </td>
-    <td class="else-columns">
-      <p>кабінет 104-Б</p>
+    <td class="else-columns" style="width:27%;">
+      <div class="qr_hover"><p>кабінет 104-Б</p>
       <p>(Головний корпус)</p>
+      <span class="qr_map_pyzhyk">
+      <img src="/afiles_imgs/qr.png" />
+     </span>
     </td>
   </tr>
   <tr>
