@@ -9,7 +9,15 @@
     <link rel="icon" href="afiles_imgs/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa&v1" rel="stylesheet">
-
+<script>
+    const logoTop = document.querySelector('#logo_top');
+    
+    const logoTopHeight = logoTop.offsetHeight;
+    
+    const header = document.querySelector('#header');
+    
+    header.style.height = `${logoTopHeight}px`;
+</script>
     <style>
    @font-face {
       font-family: 'Knunika';
