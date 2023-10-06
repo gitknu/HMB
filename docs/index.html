@@ -1,1 +1,186 @@
-<html></html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>НМВ КНУ</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link rel="icon" href="afiles_imgs/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&v1" rel="stylesheet">
+    <style>
+   @font-face {
+      font-family: 'Knunika';
+      src: url('https://gitknu.github.io/HMB/afiles_imgs/Knunika.ttf') format('truetype');
+    }
+
+ header {
+        background: rgb(0,64,12);
+        background: linear-gradient(180deg, rgba(0,88,20,1) 0%, rgba(219,228,197,1) 100%);
+        box-shadow: 0 0 0px rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
+        overflow: hidden;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(10px); /* Adjust the blur value as needed */
+        z-index: -1;
+    }
+
+.old_site {
+  opacity: 0.5;
+  border-radius: 10px;
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.header-buttons {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      list-style: none;
+      padding: 5;
+      margin: auto;
+    }
+    
+    .header-link {
+      color: blue;
+      text-decoration: none;
+      font-family: 'knunika', Arial, sans-serif;
+    }
+    
+    .header-link:hover {
+      color: red;
+    }
+
+:link { color: black; text-decoration: none;}
+:visited { color: black; text-decoration: none;}
+
+/* Styles for vertical screen orientation */
+@media (orientation: portrait) {
+    .header-buttons {
+      width: 90%;
+    }
+
+    .header-link {
+      font-size: 2.25vh;
+    }
+
+   .float {
+        font-size: 6vw;
+	width:20vw;
+	height:10vh;
+  }
+
+    #logo_top {
+        width: 20vw;
+        height: 20vw;
+    }
+
+}
+
+/* Styles for horizontal screen orientation */
+  @media screen and (orientation: landscape){
+    .header-buttons {
+      width: 97%;
+    }
+
+    .header-link {
+      font-size: 6vh;
+    }
+
+   .float {
+	width:7vw;
+	height:9vh;
+        font-size: 2.5vh;
+  }
+
+
+    #logo_top {
+        width: 15vw;
+        height: 15vw;
+    }
+
+html {
+	scroll-behavior: smooth;
+        font-family: 'Comfortaa', arial, serif;
+        font-size: 2.5vh;
+}
+
+body {
+        background: linear-gradient(180deg, rgba(196,217,189,1) 0%, rgba(226,233,200,1) 10%, rgba(255,255,255,1) 31%, rgba(255,255,255,1) 100%);
+    }
+
+
+.float {
+        text-decoration: none;
+	position:fixed;
+	bottom:50px;
+	right:20px;
+        opacity: 0.7;
+	background-color:white;
+	color:blue;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+ </style>
+</head>
+
+<body>
+<a href="#top" class="float">
+<h2>▲</h2>
+</a>
+  <header id="header">
+    <img id="logo_top" src="https://gitknu.github.io/HMB/afiles_imgs/logo_nmv_compp.gif" alt="Logo" style="position: absolute; top: 10px; left: 10px;">
+
+<ul class="header-buttons">
+  <li>ㅤ</li>
+  <li><a href="https://gitknu.github.io/HMB/" class="header-link">ПРО НАС</a></li>
+  <li><a href="https://gitknu.github.io/HMB/news" class="header-link">НОВИНИ</a></li>
+  <li><a href="https://gitknu.github.io/HMB/else" class="header-link">ІНШЕ</a></li>
+</ul>
+
+  </header>
+<body>
+<div style="width: 100wv; text-align: right; margin-top: 10px;"><button class="old_site" id="hide1" onclick="location.href='http://nmc.univ.kiev.ua/doc.htm';">Старий сайт ⌛</button> <button class="old_site" id="hide2" onclick="myFunction()">Лишитися ✅</button></div>
+<p>Новини</p>
+<script>
+    const logoTop = document.querySelector('#logo_top');
+    
+    const logoTopHeight = logoTop.offsetHeight;
+    
+    const header = document.querySelector('#header');
+    
+    header.style.height = `${logoTopHeight}px`;
+</script>
+<script>
+function myFunction() {
+  var x = document.getElementById("hide1");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+ var y = document.getElementById("hide2");
+  if (y.style.display === "none") {
+    y.style.display = "block";
+  } else {
+    y.style.display = "none";
+  }
+}
+</script>
+</div>
+</body>
+
+</html>
