@@ -9,6 +9,7 @@
     <link rel="icon" href="afiles_imgs/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa&v1" rel="stylesheet">
+
     <style>
    @font-face {
       font-family: 'Knunika';
@@ -65,6 +66,23 @@
 :link { color: black; text-decoration: none;}
 :visited { color: black; text-decoration: none;}
 
+ #table {
+  width: 100%;
+  }
+
+ .rounded-image {
+    border-radius: 50%;
+  }
+
+  .main-column {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .else-columns {
+    text-align: center;
+  }
+
 /* Styles for vertical screen orientation */
 @media (orientation: portrait) {
     .header-buttons {
@@ -84,6 +102,31 @@
     #logo_top {
         width: 20vw;
         height: 20vw;
+    }
+
+    model-viewer {
+        width: 30vw;
+        height: 30vw;
+    }
+
+ .rounded-image {
+        width: 70vw;
+        height: 70vw;
+  }
+
+    #table_port {
+    display: block;
+    width: 100%;
+    }
+
+    #table_land {
+    display: none;
+    }
+
+    td {
+        border-radius: 35px;
+    border: none;
+    box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.5);
     }
 
 }
@@ -110,6 +153,32 @@
         height: 15vw;
     }
 
+    model-viewer {
+        width: 15vw;
+        height: 15vw;
+    }
+
+ .rounded-image {
+        width: 15vw;
+        height: 15vw;
+  }
+
+    #table_port {
+    display: none;
+    }
+
+    #table_land {
+    display: block;
+    }
+
+    td {
+        border-radius: 40px;
+    border: none;
+    box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.5);
+    }
+
+}
+
 html {
 	scroll-behavior: smooth;
         font-family: 'Comfortaa', arial, serif;
@@ -134,6 +203,11 @@ body {
 	box-shadow: 2px 2px 3px #999;
 }
 
+    #spin {
+        height: 20vh;
+        color: red;
+        display: block;
+    }
  </style>
 </head>
 
@@ -146,15 +220,45 @@ body {
 
 <ul class="header-buttons">
   <li>ㅤ</li>
-  <li><a href="https://gitknu.github.io/HMB/" class="header-link">ПРО НАС</a></li>
-  <li><a href="https://gitknu.github.io/HMB/docs" class="header-link">ДОКУМЕНТИ</a></li>
+  <li><a href="https://gitknu.github.io/HMB/news" class="header-link">НОВИНИ</a></li>
+  <li><a href="https://gitknu.github.io/HMB" class="header-link">ПРО НАС</a></li>
   <li><a href="https://gitknu.github.io/HMB/else" class="header-link">ІНШЕ</a></li>
 </ul>
 
   </header>
-<body>
+
 <div style="width: 100wv; text-align: right; margin-top: 10px;"><button class="old_site" id="hide1" onclick="location.href='http://nmc.univ.kiev.ua/doc.htm';">Старий сайт ⌛</button> <button class="old_site" id="hide2" onclick="myFunction()">Лишитися ✅</button></div>
-<p>Новини</p>
+
+<table>
+<tr>
+<th>
+<div class="blank-space" style="height: 10vh;"></div>
+    <div>
+        <model-viewer id="orbit-demo" interpolation-decay="500" src="https://gitknu.github.io/HMB/knu_fogger.glb">
+        </model-viewer>
+        <script>
+            (() => {
+                const modelViewer = document.querySelector('#orbit-demo');
+                const orbitCycle = [
+                    '-90deg 77deg 12m',
+                    '-60deg 75deg 12m',
+                    '-120deg 65deg 12m'
+                ];
+
+                setInterval(() => {
+                    const currentOrbitIndex = orbitCycle.indexOf(modelViewer.cameraOrbit);
+                    modelViewer.cameraOrbit =
+                        orbitCycle[(currentOrbitIndex + 1) % orbitCycle.length];
+                }, 9000);
+            })();
+        </script>
+</th>
+<th style="width: 15%; text-align: center;">PH1</th>
+<th style="width: 15%; text-align: center;">ML1</th>
+<th style="width: 15%; text-align: center;">LC1</th>
+<th></th>
+</tr>
+</table>
 <script>
     const logoTop = document.querySelector('#logo_top');
     
@@ -180,7 +284,24 @@ function myFunction() {
   }
 }
 </script>
-</div>
+
+ <script>
+    function copyToClipboard(elementId) {
+      var text = document.getElementById(elementId).innerText;
+      var input = document.createElement("input");
+      input.style.position = "fixed";
+      input.style.opacity = 0;
+      input.value = text;
+      document.body.appendChild(input);
+      input.select();
+      input.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      document.body.removeChild(input);
+      alert("'" + text + "'" + " скопійовано!");
+    }
+  </script>
+
+    </div>
 </body>
 
 </html>
