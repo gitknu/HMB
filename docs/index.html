@@ -208,7 +208,34 @@ body {
         color: red;
         display: block;
     }
- </style>
+
+      .hidden {
+        display: none;
+      }
+    </style>
+    <script>
+      function toggleRow(rowId) {
+        var row = document.getElementById(rowId);
+        row.classList.toggle("hidden");
+      }
+
+      function toggleAllRows() {
+        var filesRows = document.querySelectorAll(".files-row");
+        filesRows.forEach(function(row) {
+          row.classList.toggle("hidden");
+        });
+        var previousYearsRow = document.getElementById("previousYears");
+        previousYearsRow.classList.toggle("hidden");
+      }
+
+      function downloadYear(year) {
+        // Logic to download files for the given year
+      }
+
+      function downloadAllYears() {
+       window.open("https://google.com");
+      }
+    </script>
 </head>
 
 <body>
@@ -228,7 +255,267 @@ body {
   </header>
 
 <div style="width: 100wv; text-align: right; margin-top: 10px;"><button class="old_site" id="hide1" onclick="location.href='http://nmc.univ.kiev.ua/doc.htm';">Старий сайт ⌛</button> <button class="old_site" id="hide2" onclick="myFunction()">Лишитися ✅</button></div>
-
+ <table>
+      <tr>
+        <th>Year</th>
+        <th>Actions</th>
+      </tr>
+      <tr>
+        <td>
+          <button onclick="toggleAllRows()">Open all</button>
+        </td>
+        <td>
+          <button onclick="downloadAllYears()">Save all</button>
+        </td>
+      </tr>
+      <tr class="year-row" id="row2023">
+        <td>
+          <button onclick="toggleRow('files2023')">2022/23</button>
+        </td>
+        <td>
+          <button onclick="downloadYear(2023)">Save this year</button>
+        </td>
+      </tr>
+      <tr class="files-row hidden" id="files2023">
+        <td colspan="2">
+            <ol type="1">
+                <li><a href="https://google.com">File A</a></li>
+                <br>
+                <li><a href="https://google.com">File B</a></li>
+                <br>
+                <li><a href="https://google.com">File C</a></li>
+            </ol>  
+            </td>
+      </tr>
+      <tr class="year-row" id="row2022">
+        <td>
+          <button onclick="toggleRow('files2022')">2021/22</button>
+        </td>
+        <td>
+          <button onclick="downloadYear(2022)">Save this year</button>
+        </td>
+      </tr>
+      <tr class="files-row hidden" id="files2022">
+        <td colspan="2">
+            <ol type="1">
+                <li><a href="https://google.com">File A</a></li>
+                <br>
+                <li><a href="https://google.com">File B</a></li>
+                <br>
+                <li><a href="https://google.com">File C</a></li>
+            </ol>  
+            </td>
+      </tr>
+      <tr class="year-row" id="row2021">
+        <td>
+          <button onclick="toggleRow('files2021')">2020/21</button>
+        </td>
+        <td>
+          <button onclick="downloadYear(2021)">Save this year</button>
+        </td>
+      </tr>
+      <tr class="files-row hidden" id="files2021">
+        <td colspan="2"> 
+            <ol type="1">
+                <li><a href="https://google.com">File A</a></li>
+                <br>
+                <li><a href="https://google.com">File B</a></li>
+                <br>
+                <li><a href="https://google.com">File C</a></li>
+            </ol>  
+        </td>
+      </tr>
+      <tr class="year-row" id="row2020">
+        <td>
+          <button onclick="toggleRow('files2020')">2019/20</button>
+        </td>
+        <td>
+          <button onclick="downloadYear(2020)">Save this year</button>
+        </td>
+      </tr>
+      <tr class="files-row hidden" id="files2020">
+        <td colspan="2">
+            <ol type="1">
+                <li><a href="https://google.com">File A</a></li>
+                <br>
+                <li><a href="https://google.com">File B</a></li>
+                <br>
+                <li><a href="https://google.com">File C</a></li>
+            </ol>   
+            </td>
+      </tr>
+      <tr class="year-row" id="row2019">
+        <td>
+          <button onclick="toggleRow('files2019')">2018/19</button>
+        </td>
+        <td>
+          <button onclick="downloadYear(2019)">Save this year</button>
+        </td>
+      </tr>
+      <tr class="files-row hidden" id="files2019">
+        <td colspan="2">
+            <ol type="1">
+                <li><a href="https://google.com">File A</a></li>
+                <br>
+                <li><a href="https://google.com">File B</a></li>
+                <br>
+                <li><a href="https://google.com">File C</a></li>
+            </ol>  
+        </td>
+      </tr>
+      <tr class="year-row" id="row2018">
+        <td>
+          <button onclick="toggleRow('files2018')">2017/18</button>
+        </td>
+        <td>
+          <button onclick="downloadYear(2018)">Save this year</button>
+        </td>
+      </tr>
+      <tr class="files-row hidden" id="files2018">
+        <td colspan="2">
+            <ol type="1">
+                <li><a href="https://google.com">File A</a></li>
+                <br>
+                <li><a href="https://google.com">File B</a></li>
+                <br>
+                <li><a href="https://google.com">File C</a></li>
+            </ol>  
+            </td>
+      </tr>
+      <tr class="year-row" id="row2017">
+        <td>
+          <button onclick="toggleRow('files2017')">2016/17</button>
+        </td>
+        <td>
+          <button onclick="downloadYear(2017)">Save this year</button>
+        </td>
+      </tr>
+      <tr class="files-row hidden" id="files2017">
+        <td colspan="2">
+            <ol type="1">
+                <li><a href="https://google.com">File A</a></li>
+                <br>
+                <li><a href="https://google.com">File B</a></li>
+                <br>
+                <li><a href="https://google.com">File C</a></li>
+            </ol>  
+        </td>
+      </tr>
+      <tr class="year-row" id="row2016">
+        <td>
+          <button onclick="toggleRow('files2016')">2015/16</button>
+        </td>
+        <td>
+          <button onclick="downloadYear(2016)">Save this year</button>
+        </td>
+      </tr>
+      <tr class="files-row hidden" id="files2016">
+        <td colspan="2"> 
+            <ol type="1">
+                <li><a href="https://google.com">File A</a></li>
+                <br>
+                <li><a href="https://google.com">File B</a></li>
+                <br>
+                <li><a href="https://google.com">File C</a></li>
+            </ol>   
+        </td>
+      </tr>
+      <tr class="year-row" id="row2015">
+        <td>
+          <button onclick="toggleRow('files2015')">2014/15</button>
+        </td>
+        <td>
+          <button onclick="downloadYear(2015)">Save this year</button>
+        </td>
+      </tr>
+      <tr class="files-row hidden" id="files2015">
+        <td colspan="2">
+            <ol type="1">
+                <li><a href="https://google.com">File A</a></li>
+                <br>
+                <li><a href="https://google.com">File B</a></li>
+                <br>
+                <li><a href="https://google.com">File C</a></li>
+            </ol>  
+        </td>
+      </tr>
+      <tr class="year-row" id="row2014">
+        <td>
+          <button onclick="toggleRow('files2014')">2013/14</button>
+        </td>
+        <td>
+          <button onclick="downloadYear(2014)">Save this year</button>
+        </td>
+      </tr>
+      <tr class="files-row hidden" id="files2014">
+        <td colspan="2">
+            <ol type="1">
+                <li><a href="https://google.com">File A</a></li>
+                <br>
+                <li><a href="https://google.com">File B</a></li>
+                <br>
+                <li><a href="https://google.com">File C</a></li>
+            </ol>   
+        </td>
+      </tr>
+      <tr class="year-row" id="row2013">
+        <td>
+          <button onclick="toggleRow('files2013')">2012/13</button>
+        </td>
+        <td>
+          <button onclick="downloadYear(2013)">Save this year</button>
+        </td>
+      </tr>
+      <tr class="files-row hidden" id="files2013">
+        <td colspan="2">
+            <ol type="1">
+                <li><a href="https://google.com">File A</a></li>
+                <br>
+                <li><a href="https://google.com">File B</a></li>
+                <br>
+                <li><a href="https://google.com">File C</a></li>
+            </ol>  
+        </td>
+      </tr>
+      <tr class="year-row" id="row2012">
+        <td>
+          <button onclick="toggleRow('files2012')">2011/12</button>
+        </td>
+        <td>
+          <button onclick="downloadYear(2012)">Save this year</button>
+        </td>
+      </tr>
+      <tr class="files-row hidden" id="files2012">
+        <td colspan="2">
+            <ol type="1">
+                <li><a href="https://google.com">File A</a></li>
+                <br>
+                <li><a href="https://google.com">File B</a></li>
+                <br>
+                <li><a href="https://google.com">File C</a></li>
+            </ol>  
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button onclick="toggleRow('files2011')">Previous years</button>
+        </td>
+        <td>
+          <button onclick="downloadYear('previous')">Save these years</button>
+        </td>
+      </tr>
+      <tr class="files-row hidden" id="files2011">
+        <td colspan="2">
+            <ol type="1">
+                <li><a href="https://google.com">File A</a></li>
+                <br>
+                <li><a href="https://google.com">File B</a></li>
+                <br>
+                <li><a href="https://google.com">File C</a></li>
+            </ol>  
+        </td>
+      </tr>
+    </table>
 <table>
 <tr>
 <th>
