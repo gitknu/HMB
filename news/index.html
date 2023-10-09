@@ -209,7 +209,42 @@ body {
         color: red;
         display: block;
     }
- </style>
+
+.blurry-button {  
+  border: none;  
+  background-color: transparent;    
+    }  
+
+  </style>
+  <script>   
+    function showMoreRows() {   
+      var table = document.getElementById("myTable");   
+      var rows = table.getElementsByTagName("tr");   
+   
+      // Calculate the number of rows to show   
+      var numRowsToShow = 2;   
+      var hiddenRowsCount = 0;   
+      for (var i = 0; i < rows.length; i++) {   
+        if (rows[i].style.display === "none") {   
+          hiddenRowsCount++;   
+          if (hiddenRowsCount === numRowsToShow) {   
+            break;   
+          }   
+        }   
+      }   
+   
+      // Show the hidden rows   
+      for (var j = 0; j < rows.length; j++) {   
+        if (rows[j].style.display === "none") {   
+          rows[j].style.display = "";   
+          hiddenRowsCount--;   
+          if (hiddenRowsCount === 0) {   
+            break;   
+          }   
+        }   
+      }   
+    }   
+  </script>     
 </head>
 
 <body>
@@ -229,7 +264,50 @@ body {
   </header>
 
 <div style="width: 100wv; text-align: right; margin-top: 10px;"><button class="old_site" id="hide1" onclick="location.href='http://nmc.univ.kiev.ua/doc.htm';">Старий сайт ⌛</button> <button class="old_site" id="hide2" onclick="myFunction()">Лишитися ✅</button></div>
-
+  <table id="myTable">   
+    <tr>   
+      <td><p><b>Запуск оновленого сайту</b></p>
+          <p>Текст новини, текст новини </p></td>  
+    </tr>   
+     <tr>  
+      <td><p><b>Створення власного логотипу</b></p>
+          <p>Текст новини, текст новини </p></td>   
+    </tr>   
+    <tr style="display: none;">   
+      <td><p><b>Створення власного шрифту</b></p>
+          <p>Текст новини, текст новини </p></td>  
+    </tr>   
+    <tr style="display: none;">   
+      <td><p><b>ііі</b></p>
+          <p>Текст новини, текст новини </p></td>   
+    </tr>   
+    <tr style="display: none;">   
+      <td><p><b>ііі</b></p>
+          <p>Текст новини, текст новини </p></td>   
+    </tr>   
+    <tr style="display: none;">   
+      <td><p><b>Проведення наради відділу</b></p>
+          <p>Текст новини, текст новини </p></td>    
+    </tr>   
+    <tr style="display: none;">   
+      <td><p><b>НМВ відтепер НМВ</b></p>
+          <p>Текст новини, текст новини </p></td>  
+    </tr>   
+    <tr style="display: none;">   
+      <td><p><b>Фотосесія співробітників</b></p>
+          <p>Текст новини, текст новини </p></td>  
+    </tr>   
+    <tr style="display: none;">   
+      <td><p><b>Проведення наради центру</b></p>
+          <p>Текст новини, текст новини </p></td>    
+    </tr>   
+    <tr style="display: none;">   
+      <td><p><b>Проведення моніторингу</b></p>
+          <p>Текст новини, текст новини </p></td>   
+    </tr>   
+  </table>   
+   
+  <button class="blurry-button" onclick="showMoreRows()"><i>Більше новин</i></button>
 <table>
 <tr>
 <th>
