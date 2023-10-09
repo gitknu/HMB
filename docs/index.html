@@ -93,6 +93,11 @@ model-viewer {
     background: radial-gradient(circle, rgba(164,164,164,1) 0%, rgba(255,255,255,1) 54%, rgba(164,164,164,1) 100%);
 }
 
+  #myTable {
+    min-width: 50%;
+    max-width: 90%;
+  }
+
 /* Styles for vertical screen orientation */
 @media (orientation: portrait) {
     .header-buttons {
@@ -301,7 +306,7 @@ body {
   </header>
 
 <div style="width: 100wv; text-align: right; margin-top: 10px;"><button class="old_site" id="hide1" onclick="location.href='http://nmc.univ.kiev.ua/doc.htm';">Старий сайт ⌛</button> <button class="old_site" id="hide2" onclick="myFunction()">Лишитися ✅</button></div>
- <table>
+  <table id="myTable">  
       <tr>
         <th>Навчальний рік</th>
         <th>Архів</th>
