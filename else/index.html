@@ -196,6 +196,7 @@ html {
 }
 
 body {
+      overflow-x: hidden;
       color: #242021;
       background: linear-gradient(180deg, rgba(82,154,196,1) 0%, rgba(175,203,219,1) 3%, rgba(214,225,231,1) 6%, rgba(255,255,255,1) 100%);
     }
@@ -254,14 +255,11 @@ body {
     visibility: visible;
 }
 
-}
-
 .marquee_line {
-  font-family: 'knunika', Arial, sans-serif;
-  font-size: 10vh;
+      font-family: 'knunika', Arial, sans-serif;
+  font-size: 7vh;
   position: absolute;
   white-space: nowrap;
-  will-change: transform;
   font-family: 'knunika', Arial, sans-serif;
   animation: marquee 30s linear infinite;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow here */
@@ -270,10 +268,6 @@ body {
 @keyframes marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
-}
-
-body {
-  overflow-x: hidden;
 }
 </style>
 </head>
@@ -304,7 +298,7 @@ body {
 <br>
 <br><a href="#anchor_interact">- інтерактиви</a>
 <br>
-<br><br></bt>А також будь-які інші розробки Навчально-методичного відділу.</p>
+<br><br>А також будь-які інші розробки Навчально-методичного відділу.</p>
 
 <div class="blank-space" style="height: 7vh;"></div>
 <p style="text-align: justify;">🎓 🎓 🎓 🎓 🎓 🎓 🎓 🎓</p>
@@ -330,9 +324,10 @@ body {
 
 <br><br>Враховуючи чисельні міжнародні зв’язки КНУ імені Тараса Шевченка, доцільним було розробити абетки країн-сусідів. Уже зараз шрифт включає символи польської та словацької мов, а також латиницю та кирилицю.</p>
 
-  <div class="marquee_line">
+  <div class="marquee_line" id="table_port">
       &nbsp;Á Č Ď É Ň Ó Š Ý Ž Ą Ć Ę Ł Ń Ó Ś Ź Ż Ў Ъ ä ö ü ß Á Č Ď É Ň Ó Š Ý Ž Ą Ć Ę Ł Ń Ó Ś Ź Ż Ў Ъ ä ö ü ß
 </div>
+<div class="blank-space" style="height: 7vh;" id="table_port"></div>
 
 <p>Відтак, дописи цим шрифтом будуть зрозумілі далеко поза межами не лише університету або столиці, а й України в цілому.</p>
 
