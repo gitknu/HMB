@@ -259,7 +259,6 @@ body {
 .marquee_line {
   font-family: 'knunika', Arial, sans-serif;
   font-size: 10vh;
-  overflow-x: hidden;
   position: absolute;
   white-space: nowrap;
   font-family: 'knunika', Arial, sans-serif;
@@ -270,6 +269,10 @@ body {
 @keyframes marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
+}
+
+body {
+  overflow-x: hidden;
 }
 </style>
 </head>
