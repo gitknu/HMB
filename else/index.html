@@ -374,10 +374,12 @@ body {
   setInterval(changeImage, 7000);
 
   // Apply CSS styles for smooth transition and full height with auto width
-container.style.backgroundSize = "auto 100%";
-container.style.backgroundRepeat = "no-repeat";
-container.style.transition = "background-image 1.25s ease-in-out";
+  container.style.backgroundSize = "contain";
+  container.style.backgroundRepeat = "no-repeat";
+  container.style.backgroundPosition = "left";
+  container.style.transition = "background-image 1.25s ease-in-out";
 </script>
+
 
 
 </th>
