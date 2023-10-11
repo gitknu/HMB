@@ -348,33 +348,16 @@ body {
 	<table style="width: 100%; text-align: left;">
   <tr>
     <th style="width: 70%;">
-<div class="ascii"></div>
-  <script>
-  const images = [
-    'url(https://gitknu.github.io/HMB/afiles_imgs/knu_red.png)',
-    'url(https://gitknu.github.io/HMB/afiles_imgs/knu_blue.png)',
-    'url(https://gitknu.github.io/HMB/afiles_imgs/knu_black.png)'
-  ];
-
-  let currentIndex = 0;
-  const asciiElement = document.querySelector('.ascii');
-
-  function changeBackgroundImage() {
-    asciiElement.style.opacity = 0; // Set opacity to 0
-    setTimeout(() => {
-      asciiElement.style.backgroundImage = images[currentIndex];
-      currentIndex = (currentIndex + 1) % images.length;
-      asciiElement.style.opacity = 1; 
-    }, 1200); 
-  }
-
-  setInterval(changeBackgroundImage,7000);
-</script>
+<img src="https://giknu.github.io/HMB/afiles_imgs/knu_red.png"/>
+<img src="https://giknu.github.io/HMB/afiles_imgs/knu_blue.png"/>
+<img src="https://giknu.github.io/HMB/afiles_imgs/knu_black.png"/>
+<img src="https://giknu.github.io/HMB/afiles_imgs/knu_white.png"/>
 </th>
 <th style="width: 30%; text-align: right; text-shadow: 1px 1px 1px grey;">
 	<span style="color:#b42101">#b42101</span>
 <br><br><span style="color:#115882">#115882</span>
 <br><br><span style="color:#242021">#242021</span>
+<br><br><span style="color:#d3d3d5">#d3d3d5</span>
 </th>
   </tr>
 </table>
