@@ -347,11 +347,39 @@ body {
 
 	<table style="width: 100%; text-align: left;">
   <tr>
-    <th style="width: 70%;">
-<img src="https://gitknu.github.io/HMB/afiles_imgs/knu_red.png"/>
-<img src="https://gitknu.github.io/HMB/afiles_imgs/knu_blue.png"/>
-<img src="https://gitknu.github.io/HMB/afiles_imgs/knu_black.png"/>
-<img src="https://gitknu.github.io/HMB/afiles_imgs/knu_white.png"/>
+    <th style="width: 70%;" id="color_show">
+<script>
+  // Get the container element
+  var container = document.getElementById("color_show");
+
+  // Array of image URLs
+  var imageUrls = [
+    "https://gitknu.github.io/HMB/afiles_imgs/knu_red.png",
+    "https://gitknu.github.io/HMB/afiles_imgs/knu_blue.png",
+    "https://gitknu.github.io/HMB/afiles_imgs/knu_black.png",
+    "https://gitknu.github.io/HMB/afiles_imgs/knu_white.png"
+  ];
+
+  // Set initial image
+  var currentIndex = 0;
+  container.style.backgroundImage = "url(" + imageUrls[currentIndex] + ")";
+
+  // Function to change the image
+  function changeImage() {
+    currentIndex = (currentIndex + 1) % imageUrls.length;
+    container.style.backgroundImage = "url(" + imageUrls[currentIndex] + ")";
+  }
+
+  // Set interval to change image every 7 seconds
+  setInterval(changeImage, 7000);
+
+  // Apply CSS styles for smooth transition and full height with auto width
+container.style.backgroundSize = "auto 100%";
+container.style.backgroundRepeat = "no-repeat";
+container.style.transition = "background-image 1.25s ease-in-out";
+</script>
+
+
 </th>
 <th style="width: 30%; text-align: right; text-shadow: 1px 1px 1px grey;">
 	<span style="color:#b42101">#b42101</span>
