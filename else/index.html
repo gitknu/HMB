@@ -95,6 +95,10 @@ model-viewer {
 
 /* Styles for vertical screen orientation */
 @media (orientation: portrait) {
+        #colors_main {
+        text-align: right; 
+    }
+    
     .header-buttons {
       width: 90%;
     }
@@ -143,6 +147,10 @@ model-viewer {
 
 /* Styles for horizontal screen orientation */
   @media screen and (orientation: landscape){
+    #colors_main {
+        text-align: center; 
+    }
+
     .header-buttons {
       width: 97%;
     }
@@ -377,13 +385,14 @@ body {
   container.style.backgroundSize = "contain";
   container.style.backgroundRepeat = "no-repeat";
   container.style.backgroundPosition = "left";
-  container.style.transition = "background-image 1.25s cubic-bezier(0.42, 0, 0.58, 1)";
+  container.style.transition = "background-image 1.25s ease-in-out";
+
 </script>
 
 
 
 </th>
-<th style="width: 30%; text-align: right; text-shadow: 1px 1px 1px grey;">
+<th id="colors_main" style="width: 30%; text-shadow: 1px 1px 1px grey;">
 	<span style="color:#b42101">#b42101</span>
 <br><br><span style="color:#115882">#115882</span>
 <br><br><span style="color:#242021">#242021</span>
