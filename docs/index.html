@@ -57,6 +57,7 @@
       color: blue;
       text-decoration: none;
       font-family: 'knunika', Arial, sans-serif;
+         transition: 0.2s ease-in-out;
     }
     
     .header-link:hover {
@@ -150,6 +151,11 @@ model-viewer {
 
 /* Styles for horizontal screen orientation */
   @media screen and (orientation: landscape){
+      
+  li a {
+   transition: 0.2s ease-in-out;
+  }
+  }
   li a:hover {
     color: #b42101;
   }
