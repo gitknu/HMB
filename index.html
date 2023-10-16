@@ -6,14 +6,14 @@
     <meta http-equiv="x-ua-compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <link rel="icon" href="https://gitknu.github.io/HMB/afiles_imgs/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="afiles_imgs/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa&v1" rel="stylesheet">
 
     <style>
    @font-face {
       font-family: 'Knunika';
-      src: url('https://gitknu.github.io/HMB/afiles_imgs/Knunika.ttf') format('truetype');
+      src: url('afiles_imgs/Knunika.ttf') format('truetype');
     }
 
  header {
@@ -57,7 +57,6 @@
       color: blue;
       text-decoration: none;
       font-family: 'knunika', Arial, sans-serif;
-      transition: 0.2s ease-in-out;
     }
     
     .header-link:hover {
@@ -94,15 +93,12 @@ model-viewer {
     background: radial-gradient(circle, rgba(164,164,164,1) 0%, rgba(255,255,255,1) 54%, rgba(164,164,164,1) 100%);
 }
 
-  #myTable {
-    min-width: 50%;
-    max-width: 95%;
-    text-align: center;
-    border-spacing: 10px;
-  }
-
 /* Styles for vertical screen orientation */
 @media (orientation: portrait) {
+.contact_qr {
+    display: none;
+}
+
     .header-buttons {
       width: 90%;
     }
@@ -151,14 +147,8 @@ model-viewer {
 
 /* Styles for horizontal screen orientation */
   @media screen and (orientation: landscape){
-
-      #landscape_content {
-            margin-left: 5vw;
-  margin-right: 5vw;
-      }
-
-li a:hover {
-      color: #b42101;
+.contact_qr {
+    height: 20vh;
 }
 
     .header-buttons {
@@ -234,13 +224,41 @@ body {
 
     #spin {
         height: 20vh;
-        color: red;
+        color: #b42101;
         display: block;
     }
 
-      .hidden {
-        display: none;
-      }
+#spin:after {
+  content:"";
+  animation: spin 60s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    content: "Реалізація заходів із забезпечення організації освітньої діяльності структурними підрозділами університету та її постійного вдосконалення відповідно до сучасних умов та досягнень науки і техніки.";
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    content: "Здійснення контролю за організацією освітньої діяльності структурними підрозділами університету.";
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    content: "Надання структурним підрозділам університету, науково-педагогічним, педагогічним працівникам і здобувачам освіти методичної та консультаційної допомоги з питань освітнього процесу.";
+    opacity: 0;
+  }
+}
 
 .qr_hover {
     position: relative;
@@ -276,30 +294,10 @@ body {
 .qr_hover:hover .qr_map_pyzhyk {
     visibility: visible;
 }
-    </style>
-    <script>
-      function toggleRow(rowId) {
-        var row = document.getElementById(rowId);
-        row.classList.toggle("hidden");
-      }
 
-      function toggleAllRows() {
-        var filesRows = document.querySelectorAll(".files-row");
-        filesRows.forEach(function(row) {
-          row.classList.toggle("hidden");
-        });
-        var previousYearsRow = document.getElementById("previousYears");
-        previousYearsRow.classList.toggle("hidden");
-      }
+}
 
-      function downloadYear(year) {
-        // Logic to download files for the given year
-      }
-
-      function downloadAllYears() {
-       window.open("https://google.com");
-      }
-    </script>
+ </style>
 </head>
 
 <body>
@@ -307,357 +305,420 @@ body {
 <h2>▲</h2>
 </a>
   <header id="header">
-    <img id="logo_top" src="https://gitknu.github.io/HMB/afiles_imgs/logo_nmv_compp.gif" alt="Logo" style="position: absolute; top: 10px; left: 3vw;">
+    <img id="logo_top" src="afiles_imgs/logo_nmv_compp.gif" alt="Logo" style="position: absolute; top: 10px; left: 3vw;">
 
 <ul class="header-buttons">
   <li>ㅤ</li>
   <li><a href="https://gitknu.github.io/HMB/news" class="header-link">НОВИНИ</a></li>
-  <li><a href="https://gitknu.github.io/HMB" class="header-link">ПРО НАС</a></li>
+  <li><a href="https://gitknu.github.io/HMB/docs" class="header-link">ДОКУМЕНТИ</a></li>
   <li><a href="https://gitknu.github.io/HMB/else" class="header-link">ІНШЕ</a></li>
 </ul>
 
   </header>
-<div id="landscape_content">
 
 <div style="width: 100wv; text-align: right; margin-top: 10px;"><button class="old_site" id="hide1" onclick="location.href='http://nmc.univ.kiev.ua/doc.htm';">Старий сайт ⌛</button> <button class="old_site" id="hide2" onclick="myFunction()">Лишитися ✅</button></div>
 
-<p>Головними документами, якими послуговується Навчально-методичний відділ є:</p>
-
-<div style="width: 100%;" id="table_port">
-<ul>
-<li><a href="google.com">Положення про Навчально-методичний відділ</a></li>
-<br>
-<li><a href="google.com">Положення про систему забезпечення якості освіти та освітнього процесу в Київському національному університеті імені Тараса Шевченка</a></li>
-<br>
-<li><a href="google.com">2-а редакція Положення про організацію освітнього процесу у Київському національному університеті імені Тараса Шевченка (друга редакція від 11 квітня 2022 р.)</a></li>
-</ul>
+<table style="width: 100%; text-align: left;">
+  <tr>
+    <th style="width: 50%;">
+      <p style="text-align: left; font-weight: 100;"><b>Що робить Навчально-методичний відділ?</b> <span id="table_land"><br></span>У сферу наших функцій входить чимало обов'язків.
+        <br><br>
+<div id="spin-wrap">
+<span id="spin" style="font-weight: 100;"></span>
 </div>
+</th>
+<th id="table_land" style="width: 50%;"></th>
+  </tr>
+</table>
 
-<div style="width: 50%;" id="table_land">
-<ul>
-<li><a href="google.com">Положення про Навчально-методичний відділ</a></li>
-<br>
-<li><a href="google.com">Положення про систему забезпечення якості освіти та освітнього процесу в Київському національному університеті імені Тараса Шевченка</a></li>
-<br>
-<li><a href="google.com">2-а редакція Положення про організацію освітнього процесу у Київському національному університеті імені Тараса Шевченка (друга редакція від 11 квітня 2022 р.)</a></li>
-</ul>
-</div>
+<p><br>Основною метою діяльності відділу є сприяння організації навчальному процесу відповідно до чинного законодавства та його науково-методичному забезпеченню в інститутах і на факультетах Університету, впровадження до навчального процесу сучасних методик та технологій.</p>
+<p>Відділ є структурним підрозділом Університету, підпорядкованим <a href="https://knu.ua/ua/geninf/adm/Bugrov/">Ректору</a>. Безпосереднє керівництво роботою відділу здійснює <a href="https://knu.ua/ua/geninf/adm/Gozhyk/">Проректор з науково-педагогічної роботи Університету</a>. Організовує роботу відділу директор.</p>
+<p>Ви можете дізнатися більше про відділ у <a href="https://gitknu.github.io/HMB/afiles_imgs/polozh.pdf"><u>цьому документі</u></a> або у розділі <a href="https://gitknu.github.io/HMB/docs"><b>"<i>Документи</i>"</b></a>.</p>
+<div class="blank-space" style="height: 3vh;"></div>
+<p style="text-align: justify;">🎓 🎓 🎓 🎓 🎓 🎓 🎓 🎓</p>
+<a name="anchor_contacts"><br></a>
+<div class="blank-space" style="height: 3vh;"></div>
+<p><b>Нижче ви можете ознайомитися з переліком наших співробітників та знайти необхідні контакти.</b><br>Також ви маєте змогу вивантажити їх для того аби мати під рукою без доступу в Інтернет:</p>
 
-<p><b>Нижче можна переглянути перелік усіх інших документів за різні навчальні роки.</b>
-<br>Також можна вивантажити їх для того аби мати під рукою без доступу в Інтернет:</p>
-  <table id="myTable">  
+<table id="table_port">
+  <tr>
+    <td class="main-column">
+      <img src="afiles_imgs/pyzhyk_a_m.jpg" class="rounded-image">
+      <p>Пижик Андрій Миколайович</p>
+      <h3><b>директор НМВ</b></h3> 
+      <p style="font-weight: 100;"><i>організовує роботу відділу та очолює його</i></p>
+      <table style="text-align:left; padding-left:20vw; padding-bottom: 1vh;">
       <tr>
-        <th>Навчальний рік</th>
-        <th>Архів</th>
-      </tr>
-      <tr>
-        <td>
-           <a href="#" onclick="toggleAllRows()"><b><u>Усі роки</u></b></a>
-        </td>
-        <td>
-           <a href="#" onclick="downloadAllYears()"><u>Зберегти</u></a>
-        </td>
-      </tr>
-      <tr class="year-row" id="row2023">
-        <td>
-           <a href="#" onclick="toggleRow('files2023')"><b>2022/23</b></a>
-        </td>
-        <td>
-           <a href="https://fex.net/s/xplak45" onclick="downloadYear(2023)" target="_blank">💾 цей рік</a>
-        </td>
-      </tr>
-      <tr class="files-row hidden" id="files2023">
-        <td colspan="2" style="text-align: left;">
-            <ol type="1">
-                <li><a href="http://nmc.univ.kiev.ua/docs/Nakaz_50_32_vid_20_01_23_Pro_pidgotovku_do_2023_24.pdf" target="_blank">Наказ про підготовку до 2023/2024 навчального року</a></li>
-            </ol>  
-            </td>
-      </tr>
-      <tr class="year-row" id="row2022">
-        <td>
-           <a href="#" onclick="toggleRow('files2022')"><b>2021/22</b></a>
-        </td>
-        <td>
-           <a href="https://fex.net/s/mrvn5dd" onclick="downloadYear(2022)" target="_blank">💾 цей рік</a>
-        </td>
-      </tr>
-      <tr class="files-row hidden" id="files2022">
-        <td colspan="2" style="text-align: left;">
-            <ol type="1">
-                <li><a href="http://nmc.univ.kiev.ua/docs/1087_32_from_24_12_2021.pdf" target="_blank">Наказ про підготовку до 2022/2023 навчального року</a></li>
-                <br>
-                <li><a href="http://nmc.univ.kiev.ua/docs/Polozhennia-pro-organizatsiyu-osvitniogo-procesu-11_04_2022.pdf" target="_blank">2-а редакція Положення про організацію освітнього процесу у Київському національному університеті імені Тараса Шевченка (від 11 квітня 2022 р.)</a></li>
-            </ol>  
-            </td>
-      </tr>
-      <tr class="year-row" id="row2021">
-        <td>
-           <a href="#" onclick="toggleRow('files2021')"><b>2020/21</b></a>
-        </td>
-        <td>
-           <a href="#" onclick="downloadYear(2021)">💾 цей рік</a>
-        </td>
-      </tr>
-      <tr class="files-row hidden" id="files2021">
-        <td colspan="2" style="text-align: left;">
-	 <ol type="1">	
-<li><b></b>Інформація про запровадження нових зразків організаційної документації ЕК.</b></li>
-            <ul type="1">
-		<br>
-                <li><a href="http://nmc.univ.kiev.ua/docs/Rozporyadzhennya%20EK%2029042021.PDF" target="_blank">Додаток 1. Розпорядження.</a></li>
-                <br>
-                <li><a href="http://nmc.univ.kiev.ua/docs/Dodatku%20do%20EK.doc" target="_blank">Додаток 2. Склад ЕК.</a></li>
-                <br>
-                <li><a href="http://nmc.univ.kiev.ua/docs/EK_dyplomna.doc" target="_blank">Додаток 3. Протокол засідання ЕК захисту випускної кваліфікаційної роботи.</a></li>
-		<br>
-                <li><a href="http://nmc.univ.kiev.ua/docs/EK_ispyt.docx" target="_blank">Додаток 4. Протокол засідання ЕК іспит.</a></li>
-		<br>
-                <li><a href="http://nmc.univ.kiev.ua/docs/EK_kvalifikacia.doc" target="_blank">Додаток 5. Протокол засідання ЕК про присвоєння кваліфікації</a></li>
-            </ul>  
-<br>
-                <li><a href="http://nmc.univ.kiev.ua/docs/Povtorna%20pidsumkova%20atestacia%202021.pdf" target="_blank">Наказ в.о. ректора "Про допуск до проходження повторної атестації здобувачів вищої освіти Київського національного університету імені Тараса Шевченка у 2021 році" від 01.04.2021 року №205-32</a></li>
-            <ul type="1">
-		<br>
-                <li><a href="http://nmc.univ.kiev.ua/docs/Dogovir%20na%20povtornu%20atestaciyu%202021.docx" target="_blank">Додаток: Договір на повторну атестацію</a></li>
-		</ul>
-		<br>
-                <li><a href="http://nmc.univ.kiev.ua/docs/Grafik%20navchalnogo%20procesu%202021_2022.pdf" target="_blank">Розпорядження в.о. ректора "Про затвердження графіка навчального процесу за програмами першого і другого рівнів вищої освіти на 2021/2022 н.р." від 21.04.2021 року за №26</a></li>
-		<br>
-                <li><a href="http://nmc.univ.kiev.ua/docs/Nakaz%20Pro%20zatverdzhennya%20formy%20dokumentiv%20pro%20VO.pdf" target="_blank">Наказ ректора "Про затвердження форми та технічні описи документів про вищу освіту в Київському національному університеті імені Тараса Шевченка" від 12.03.2021 за № 151-32</a></li>
-		<br>
-                <li><a href="http://nmc.univ.kiev.ua/docs/Forma%20Podannya%20korystuvach%20EDEBO_new170521.doc" target="_blank">Лист деканам факультетів/директорам інститутів щодо правильного оформлення пакету документів про призначення користувачів для роботи в Єдиній державній електронній базі з питань освіти</a></li>
-		<br>
-                <li><a href="http://nmc.univ.kiev.ua/docs/Nakaz%20pro%20pidgotovku%20do%2021-22%20nr.pdf" target="_blank">Наказ про "Про підготовку до 2021/2022 навчального року" від 30.12.2020 року за №862-32</a></li>
-		<br>
-                <li><a href="http://nmc.univ.kiev.ua/docs/Nakaz%20855-32.pdf" target="_blank">Наказ "Про особливості організації освітнього процесу у 2 семестрі 2020/2021 навчального року" від 29.12.2020 року за № 855-32</a></li>
-		<br>
-                <li><a href="http://nmc.univ.kiev.ua/docs/lust_zvit_rect_2020_osvita.doc" target="_blank">Лист деканам факультетів, директорам інститутів, директорам коледжів, диретору УФМЛ, завідувачу підготовчого відділення щодо підготовки інформації про роботу структурних підрозділів у 2019/2020 н.р. для щорічного ЗВІТУ РЕКТОРА.</a></li>
-            <ul type="1">
-		<br>
-                <li><a href="http://nmc.univ.kiev.ua/docs/2020_Tabl_zvit_rectora_osvita.xlsx" target="_blank">Додаток: Електронна форма EXCEL для заповнення інформації структурними підрозділами</a></li>
-		</ul>
-		<br>
-                <li><a href="http://nmc.univ.kiev.ua/docs/Quality-2020.pdf" target="_blank">ПОЛОЖЕННЯ про систему забезпечення якості освіти та освітнього процесу в Київському національному університеті імені Тараса Шевченка</a></li>
-		<br>
-                <li><a href="http://nmc.univ.kiev.ua/docs/310820%20Pro%20osoblyvosti%20organizacii%20osvitnyogo%20procesu%20I%20sem.pdf" target="_blank">Наказ про "Про особливості організації освітнього процесу у 1 семестрі 2020/2021 навчального року" від 27.08.2020 року за №553-32</a></li>
-</ol>
-        </td>
-      </tr>
-      <tr class="year-row" id="row2020">
-        <td>
-           <a href="#" onclick="toggleRow('files2020')"><b>2019/20</b></a>
-        </td>
-        <td>
-           <a href="#" onclick="downloadYear(2020)">💾 цей рік</a>
-        </td>
-      </tr>
-      <tr class="files-row hidden" id="files2020">
-        <td colspan="2" style="text-align: left;">
-            <ol type="1">
-                <li><a href="http://nmc.univ.kiev.ua/docs/30062020%20Kontseptsia%20dystantsiynogo%20navchannya.doc" target="_blank">Концепція впровадження дистанційного навчання в освітній процес Київського національного університету імені Тараса Шевченка</a></li>
-                <br>
-                <li><a href="http://nmc.univ.kiev.ua/docs/Poloz_NMCONP_2020.pdf" target="_blank">Положення про Науково-методичний центр організації навчального процесу Київського національного університету імені Тараса Шевченка</a></li>
-                <br>
-                <li><a href="http://nmc.univ.kiev.ua/docs/Poloz_Rad-Robotodavc_2020.pdf" target="_blank">Положення про ради роботодавців у Київському національному університеті імені Тараса Шевченка</a></li>
-                <br>
-                <li><a href="http://nmc.univ.kiev.ua/docs/Poloz_Oputuvanya_2020.pdf" target="_blank">Положення про опитування здобувачів освіти і науково-педагогічних працівників Київського національного університету імені Тараса Шевченка</a></li>
-                <br>
-                <li><a href="http://nmc.univ.kiev.ua/docs/Poryadok%20zal_ekz%20sesii%20dyst_techn.pdf" target="_blank">Тимчасовий порядок проведення заліково-екзаменаційної сесії та підсумкової атестації з використанням технологій дистанційного навчання у Київському національному університеті імені Тараса Шевченка затверджено наказом Ректора від 21.05.20 за №328-32</a></li>
-                <br>
-                <li><a href="http://nmc.univ.kiev.ua/docs/10032020%20Kontseptsia%20vyvchennya%20inoz%20movy.pdf" target="_blank">Концепція вивчення іноземних мов студентами неспеціальних факультетів/інститутів Київського національного університету імені Тараса Шевченка затверджена Вченою радою Київського національного університету імені Тараса Шевченка від 02.03.20 (Протокол №8)</a></li>
-                <br>
-                <li><a href="http://nmc.univ.kiev.ua/docs/Nakaz%20pro%20pidgotovku%20do%202020_2021%20nr.pdf" target="_blank">Наказ про "Про підготовку до 2020/2021 навчального року" від 17.01.2020 року за №27-32</a></li>
-                <br>
-                <li><a href="http://nmc.univ.kiev.ua/docs/Rozporyadzhennya_monitoring%202019.pdf" target="_blank">Розпорядження Ректора "Про проведення моніторингу підсумкової атестації та зимової екзаменаційної сесії 2019/2020 н.р." від 04.12.2019 № 117</a></li>
-            <ul type="1">
-		<br>
-                <li><a href="http://nmc.univ.kiev.ua/docs/Telefon_monitoring%202019.pdf" target="_blank">Додаток 1. Розпорядження Ректора "Про створення консультативного телефону "Зимова екзаменаційна сесія 2019/2020 навчального року" від 04.12.2019 № 116</a></li>
-		<br>
-                <li><a href="http://nmc.univ.kiev.ua/docs/Spysok%20spivrobitnykiv%20monitoring%202019.pdf" target="_blank">Додаток 2. Список співробітників НМЦОНП уповноважених на здійснення моніторингу зимової заліково-екзаменаційної сесії 2019/2020 навчального року та підсумкової атестації у грудні 2019 року.</a></li>
-		<br>
-                <li><a href="http://nmc.univ.kiev.ua/docs/Povnovazhennya%20monitoring%202019.pdf" target="_blank">Додаток 3. Повноваження співробітників НМЦОНП, уповноважених на здійснення моніторингу</a></li>
-		</ul>
-                <br>
-                <li><a href="http://nmc.univ.kiev.ua/docs/lust_zvit_rect_2019.doc" target="_blank">Лист деканам факультетів, директорам інститутів, директорам коледжів, диретору УФМЛ, завідувачу підготовчого відділення від 21.10.2019 року №056/929 щодо підготовки інформації про роботу структурних підрозділів у 2018/2019 н.р. для щорічного ЗВІТУ РЕКТОРА.</a></li>
-  <ul type="1">
-		<br>
-                <li><a href="http://nmc.univ.kiev.ua/docs/2019_Tabl_zvit_rect_proekt.xlsx" target="_blank">Додаток: Електронна форма EXCEL для заповнення інформації структурними підрозділами</a></li>
-</ul>
-            </ol>   
-            </td>
-      </tr>
-      <tr class="year-row" id="row2019">
-        <td>
-           <a href="#" onclick="toggleRow('files2019')"><b>2018/19</b></a>
-        </td>
-        <td>
-           <a href="#" onclick="downloadYear(2019)">💾 цей рік</a>
-        </td>
-      </tr>
-      <tr class="files-row hidden" id="files2019">
-        <td colspan="2" style="text-align: left;">
-            <ol type="1">
-                <li><a href="https://google.com" target="_blank">File A</a></li>
-                <br>
-                <li><a href="https://google.com" target="_blank">File B</a></li>
-                <br>
-                <li><a href="https://google.com" target="_blank">File C</a></li>
-            </ol>  
-        </td>
-      </tr>
-      <tr class="year-row" id="row2018">
-        <td>
-           <a href="#" onclick="toggleRow('files2018')"><b>2017/18</b></a>
-        </td>
-        <td>
-           <a href="#" onclick="downloadYear(2018)">💾 цей рік</a>
-        </td>
-      </tr>
-      <tr class="files-row hidden" id="files2018">
-        <td colspan="2" style="text-align: left;">
-            <ol type="1">
-                <li><a href="https://google.com" target="_blank">File A</a></li>
-                <br>
-                <li><a href="https://google.com" target="_blank">File B</a></li>
-                <br>
-                <li><a href="https://google.com" target="_blank">File C</a></li>
-            </ol>  
-            </td>
-      </tr>
-      <tr class="year-row" id="row2017">
-        <td>
-           <a href="#" onclick="toggleRow('files2017')"><b>2016/17</b></a>
-        </td>
-        <td>
-           <a href="#" onclick="downloadYear(2017)">💾 цей рік</a>
-        </td>
-      </tr>
-      <tr class="files-row hidden" id="files2017">
-        <td colspan="2" style="text-align: left;">
-            <ol type="1">
-                <li><a href="https://google.com" target="_blank">File A</a></li>
-                <br>
-                <li><a href="https://google.com" target="_blank">File B</a></li>
-                <br>
-                <li><a href="https://google.com" target="_blank">File C</a></li>
-            </ol>  
-        </td>
-      </tr>
-      <tr class="year-row" id="row2016">
-        <td>
-           <a href="#" onclick="toggleRow('files2016')"><b>2015/16</b></a>
-        </td>
-        <td>
-           <a href="#" onclick="downloadYear(2016)">💾 цей рік</a>
-        </td>
-      </tr>
-      <tr class="files-row hidden" id="files2016">
-        <td colspan="2" style="text-align: left;">
-            <ol type="1">
-                <li><a href="https://google.com" target="_blank">File A</a></li>
-                <br>
-                <li><a href="https://google.com" target="_blank">File B</a></li>
-                <br>
-                <li><a href="https://google.com" target="_blank">File C</a></li>
-            </ol>   
-        </td>
-      </tr>
-      <tr class="year-row" id="row2015">
-        <td>
-           <a href="#" onclick="toggleRow('files2015')"><b>2014/15</b></a>
-        </td>
-        <td>
-           <a href="#" onclick="downloadYear(2015)">💾 цей рік</a>
-        </td>
-      </tr>
-      <tr class="files-row hidden" id="files2015">
-        <td colspan="2" style="text-align: left;">
-            <ol type="1">
-                <li><a href="https://google.com" target="_blank">File A</a></li>
-                <br>
-                <li><a href="https://google.com" target="_blank">File B</a></li>
-                <br>
-                <li><a href="https://google.com" target="_blank">File C</a></li>
-            </ol>  
-        </td>
-      </tr>
-      <tr class="year-row" id="row2014">
-        <td>
-           <a href="#" onclick="toggleRow('files2014')"><b>2013/14</b></a>
-        </td>
-        <td>
-           <a href="#" onclick="downloadYear(2014)">💾 цей рік</a>
-        </td>
-      </tr>
-      <tr class="files-row hidden" id="files2014">
-        <td colspan="2" style="text-align: left;">
-            <ol type="1">
-                <li><a href="https://google.com" target="_blank">File A</a></li>
-                <br>
-                <li><a href="https://google.com" target="_blank">File B</a></li>
-                <br>
-                <li><a href="https://google.com" target="_blank">File C</a></li>
-            </ol>   
-        </td>
-      </tr>
-      <tr class="year-row" id="row2013">
-        <td>
-           <a href="#" onclick="toggleRow('files2013')"><b>2012/13</b></a>
-        </td>
-        <td>
-           <a href="#" onclick="downloadYear(2013)">💾 цей рік</a>
-        </td>
-      </tr>
-      <tr class="files-row hidden" id="files2013">
-        <td colspan="2" style="text-align: left;">
-            <ol type="1">
-                <li><a href="https://google.com" target="_blank">File A</a></li>
-                <br>
-                <li><a href="https://google.com" target="_blank">File B</a></li>
-                <br>
-                <li><a href="https://google.com" target="_blank">File C</a></li>
-            </ol>  
-        </td>
-      </tr>
-      <tr class="year-row" id="row2012">
-        <td>
-           <a href="#" onclick="toggleRow('files2012')"><b>2011/12</b></a>
-        </td>
-        <td>
-           <a href="#" onclick="downloadYear(2012)">💾 цей рік</a>
-        </td>
-      </tr>
-      <tr class="files-row hidden" id="files2012">
-        <td colspan="2" style="text-align: left;">
-            <ol type="1">
-                <li><a href="https://google.com" target="_blank">File A</a></li>
-                <br>
-                <li><a href="https://google.com" target="_blank">File B</a></li>
-                <br>
-                <li><a href="https://google.com" target="_blank">File C</a></li>
-            </ol>  
-        </td>
+      <th><h3><a href="tel:+38(044)239-32-50">📞</a></h3></th>
+      <th><h3><a href="mailto:pyzhyk@knu.ua">ㅤ📧ㅤ</a></h3></th>
+      <th><h3><a href="google.com">📍 (к. 217)</a></h3></th>
       </tr>
       <tr>
-        <td>
-           <a href="#" onclick="toggleRow('files2011')"><b>Попередні</b></a>
-        </td>
-        <td>
-           <a href="#" onclick="downloadYear('previous')">💾 ці роки</a>
-        </td>
+      <th><span onclick="copyToClipboard('phone_copy_pyzhyk')">📋</span></th>ㅤㅤ 
+      <th><span onclick="copyToClipboard('mail_copy_pyzhyk')">ㅤ📋ㅤ</span></th>ㅤㅤ 
+      <th><span onclick="copyToClipboard('place_copy_pyzhyk')">📋</span> (вн. 34-45)</th>ㅤㅤ
       </tr>
-      <tr class="files-row hidden" id="files2011">
-        <td colspan="2" style="text-align: left;">
-            <ol type="1">
-                <li><a href="https://google.com" target="_blank">File A</a></li>
-                <br>
-                <li><a href="https://google.com" target="_blank">File B</a></li>
-                <br>
-                <li><a href="https://google.com" target="_blank">File C</a></li>
-            </ol>  
-        </td>
+      </table>
+      <div style="display: none;">
+      <span id="phone_copy_pyzhyk">+38(044)239-32-50</span>
+      <span id="mail_copy_pyzhyk">pyzhyk@knu.ua</span>
+      <span id="place_copy_pyzhyk">вул. Володимирська, 60. Кабінет 217</span>
+  </div>
+    </td>
+  </tr>
+  <tr>
+<td class="main-column">
+      <img src="afiles_imgs/vavronevych_a_m.jpg" class="rounded-image">
+      <p>Вавроневич Катерина Євгенівна</p>
+      <h3><b>інженер I-ї категорії</b></h3> 
+      <p style="font-weight: 100;"><i>фахівець із питань чогось неймовірно важливого</i></p>
+      <table style="text-align:left; padding-left:20vw; padding-bottom: 1vh;">
+      <tr>
+      <th><h3><a href="tel:+38(044)239-34-42">📞</a></h3></th>
+      <th><h3><a href="mailto:vavronevych@knu.ua">ㅤ📧ㅤ</a></h3></th>
+      <th><h3><a href="google.com">📍 (к. 104-А)</a></h3></th>
       </tr>
-    </table>
+      <tr>
+      <th><span onclick="copyToClipboard('phone_copy_vavron')">📋</span></th>ㅤㅤ 
+      <th><span onclick="copyToClipboard('mail_copy_vavron')">ㅤ📋ㅤ</span></th>ㅤㅤ 
+      <th><span onclick="copyToClipboard('place_copy_vavron')">📋</span> (вн. 12-12)</th>ㅤㅤ
+      </tr>
+      </table>
+      <div style="display: none;">
+      <span id="phone_copy_vavron">+38(044)239-34-42</span>
+      <span id="mail_copy_vavron">vavronevych@knu.ua</span>
+      <span id="place_copy_vavron">вул. Володимирська, 60. Кабінет 104-А</span>
+  </div>
+    </td>
+  </tr>
+  <tr>
+<td class="main-column">
+      <img src="afiles_imgs/vlasova_a_m.jpg" class="rounded-image">
+      <p>Власова Наталія Василівна</p>
+      <h3><b>методист I-ї категорії</b></h3> 
+      <p style="font-weight: 100;"><i>фахівець із питань чогось неймовірно важливого</i></p>
+      <table style="text-align:left; padding-left:20vw; padding-bottom: 1vh;">
+      <tr>
+      <th><h3><a href="tel:+38(044)239-32-42">📞</a></h3></th>
+      <th><h3><a href="mailto:mail?">ㅤ📧ㅤ</a></h3></th>
+      <th><h3><a href="google.com">📍 (к. 104-Б)</a></h3></th>
+      </tr>
+      <tr>
+      <th><span onclick="copyToClipboard('phone_copy_vlasova')">📋</span></th>ㅤㅤ 
+      <th><span onclick="copyToClipboard('mail_copy_vlasova')">ㅤ📋ㅤ</span></th>ㅤㅤ 
+      <th><span onclick="copyToClipboard('place_copy_vlasova')">📋</span> (вн. 12-12)</th>ㅤㅤ
+      </tr>
+      </table>
+      <div style="display: none;">
+      <span id="phone_copy_vlasova">+38(044)239-32-42</span>
+      <span id="mail_copy_vlasova">mail?</span>
+      <span id="place_copy_vlasova">вул. Володимирська, 60. Кабінет 104-Б</span>
+  </div>
+    </td>
+  </tr>
+  <tr>
+<td class="main-column">
+      <img src="afiles_imgs/soloviova_a_m.jpg" class="rounded-image">
+      <p>Соловйова Ірина Вікторівна</p>
+      <h3><b>методист вищої категорії</b></h3> 
+      <p style="font-weight: 100;"><i>фахівець із питань чогось неймовірно важливого</i></p>
+      <table style="text-align:left; padding-left:20vw; padding-bottom: 1vh;">
+      <tr>
+      <th><h3><a href="tel:+38(044)239-33-01">📞</a></h3></th>
+      <th><h3><a href="mailto:isoloviova@ukr.net">ㅤ📧ㅤ</a></h3></th>
+      <th><h3><a href="google.com">📍 (к. 319)</a></h3></th>
+      </tr>
+      <tr>
+      <th><span onclick="copyToClipboard('phone_copy_solov')">📋</span></th>ㅤㅤ 
+      <th><span onclick="copyToClipboard('mail_copy_solov')">ㅤ📋ㅤ</span></th>ㅤㅤ 
+      <th><span onclick="copyToClipboard('place_copy_solov')">📋</span> (вн. 12-12)</th>ㅤㅤ
+      </tr>
+      </table>
+      <div style="display: none;">
+      <span id="phone_copy_solov">+38(044)239-33-01</span>
+      <span id="mail_copy_solov">isoloviova@ukr.net</span>
+      <span id="place_copy_solov">вул. Володимирська, 60. Кабінет 319</span>
+  </div>
+    </td>
+  </tr>
+  <tr>
+<td class="main-column">
+      <img src="afiles_imgs/churiumova_a_m.jpg" class="rounded-image">
+      <p>Чурюмова Тетяна Климівна</p>
+      <h3><b>методист вищої категорії</b></h3> 
+      <p style="font-weight: 100;"><i>фахівець із питань чогось неймовірно важливого</i></p>
+      <table style="text-align:left; padding-left:20vw; padding-bottom: 1vh;">
+      <tr>
+      <th><h3><a href="tel:+38(044)239-34-42">📞</a></h3></th>
+      <th><h3><a href="mailto:mail?">ㅤ📧ㅤ</a></h3></th>
+      <th><h3><a href="google.com">📍 (к. 104-А)</a></h3></th>
+      </tr>
+      <tr>
+      <th><span onclick="copyToClipboard('phone_copy_churium')">📋</span></th>ㅤㅤ 
+      <th><span onclick="copyToClipboard('mail_copy_churium')">ㅤ📋ㅤ</span></th>ㅤㅤ 
+      <th><span onclick="copyToClipboard('place_copy_churium')">📋</span> (вн. 12-12)</th>ㅤㅤ
+      </tr>
+      </table>
+      <div style="display: none;">
+      <span id="phone_copy_churium">+38(044)239-34-42</span>
+      <span id="mail_copy_churium">mail?</span>
+      <span id="place_copy_churium">вул. Володимирська, 60. Кабінет 104-Б</span>
+  </div>
+    </td>
+  </tr>
+  <tr>
+<td class="main-column">
+      <img src="afiles_imgs/kravchenkp_a_m.jpg" class="rounded-image">
+      <p>Кравченко Катерина Василівна</p>
+      <h3><b>методист I-ї категорії</b></h3> 
+      <p style="font-weight: 100;"><i>фахівець із питань чогось неймовірно важливого</i></p>
+      <table style="text-align:left; padding-left:20vw; padding-bottom: 1vh;">
+      <tr>
+      <th><h3><a href="tel:+38(044)239-33-01">📞</a></h3></th>
+      <th><h3><a href="mailto:kateryna.kravchenko@knu.ua">ㅤ📧ㅤ</a></h3></th>
+      <th><h3><a href="google.com">📍 (к. 318)</a></h3></th>
+      </tr>
+      <tr>
+      <th><span onclick="copyToClipboard('phone_copy_kravch')">📋</span></th>ㅤㅤ 
+      <th><span onclick="copyToClipboard('mail_copy_kravch')">ㅤ📋ㅤ</span></th>ㅤㅤ 
+      <th><span onclick="copyToClipboard('place_copy_kravch')">📋</span> (вн. 12-12)</th>ㅤㅤ
+      </tr>
+      </table>
+      <div style="display: none;">
+      <span id="phone_copy_kravch">+38(044)239-33-01</span>
+      <span id="mail_copy_kravch">kateryna.kravchenko@knu.ua</span>
+      <span id="place_copy_kravch">вул. Володимирська, 60. Кабінет 318</span>
+  </div>
+    </td>
+  </tr>
+  <tr>
+<td class="main-column">
+      <img src="afiles_imgs/rudzik_a_m.jpg" class="rounded-image">
+      <p>Рудзік Лариса Юріївна</p>
+      <h3><b>методист I-ї категорії</b></h3> 
+      <p style="font-weight: 100;"><i>фахівець із питань чогось неймовірно важливого</i></p>
+      <table style="text-align:left; padding-left:20vw; padding-bottom: 1vh;">
+      <tr>
+      <th><h3><a href="tel:+38(044)239-32-42">📞</a></h3></th>
+      <th><h3><a href="mailto:lrmetod@ukr.net">ㅤ📧ㅤ</a></h3></th>
+      <th><h3><a href="google.com">📍 (к. 104-Б)</a></h3></th>
+      </tr>
+      <tr>
+      <th><span onclick="copyToClipboard('phone_copy_rudzik')">📋</span></th>ㅤㅤ 
+      <th><span onclick="copyToClipboard('mail_copy_rudzik')">ㅤ📋ㅤ</span></th>ㅤㅤ 
+      <th><span onclick="copyToClipboard('place_copy_rudzik')">📋</span> (вн. 12-12)</th>ㅤㅤ
+      </tr>
+      </table>
+      <div style="display: none;">
+      <span id="phone_copy_rudzik">+38(044)239-32-42</span>
+      <span id="mail_copy_rudzik">lrmetod@ukr.net</span>
+      <span id="place_copy_rudzik">вул. Володимирська, 60. Кабінет 104-Б</span>
+  </div>
+    </td>
+  </tr>
+  <tr>
+    <td class="main-column">
+<p><a href="https://gitknu.github.io/HMB/afiles_imgs/contacts_beta.pdf">Завантажити контакти 💾</a></p>
+    </td>
+  </tr>
+</table>
+
+<table id="table_land">
+  <tr>
+    <td class="main-column">
+      <img src="afiles_imgs/pyzhyk_a_m.jpg" class="rounded-image">
+      <p title="організовує роботу відділу та очолює його">Пижик Андрій Миколайович</p>
+    </td>
+     <td class="else-columns" style="width:27%;">
+      <p title="організовує роботу відділу та очолює його"><b>директор НМВ</b></p>
+    </td>
+    <td class="else-columns">
+      <p><div class="qr_hover"><a href="tel:+38(044)239-32-50">+38(044)239-32-50</a>
+       <span class="qr_phone_pyzhyk">
+      <img src="https://gitknu.github.io/HMB/afiles_imgs/qr_phone_217.png" />
+     </span></p>
+     </div>
+      <p><div class="qr_hover"><a href="mailto:pyzhyk@knu.ua">pyzhyk@knu.ua</a>
+       <span class="qr_mail_pyzhyk">
+      <img src="https://gitknu.github.io/HMB/afiles_imgs/qr_mail_pyzhyk.png" />
+     </span></p>
+    </td>
+    <td class="else-columns" style="width:27%;">
+      <div class="qr_hover"><p>кабінет 217</p>
+      <p>(Головний корпус)</p>
+      <span class="qr_map_pyzhyk">
+      <img src="https://gitknu.github.io/HMB/afiles_imgs/qr_map_KNU.png" />
+     </span>
+    </td>
+  </tr>
+  <tr>
+    <td class="main-column">
+      <img src="afiles_imgs/vavronevych_a_m.jpg" class="rounded-image">
+      <p title="фахівець із питань чогось неймовірно важливого">Вавроневич Катерина Євгенівна</p>
+    </td>
+     <td class="else-columns">
+      <p title="фахівець із питань чогось неймовірно важливого">інженер I-ї категорії</p>
+    </td>
+    <td class="else-columns">
+            <p><div class="qr_hover"><a href="tel:+38(044)239-34-42">+38(044)239-34-42</a>
+       <span class="qr_phone_pyzhyk">
+      <img src="https://gitknu.github.io/HMB/afiles_imgs/qr_phone_104A.png" />
+     </span></p>
+     </div>
+      <p><div class="qr_hover"><a href="mailto:vavronevych@knu.ua">vavronevych@knu.ua</a>
+       <span class="qr_mail_pyzhyk">
+      <img src="https://gitknu.github.io/HMB/afiles_imgs/qr_mail_vavron.png" />
+     </span></p>
+    </td>
+    <td class="else-columns" style="width:27%;">
+      <div class="qr_hover"><p>кабінет 104-А</p>
+      <p>(Головний корпус)</p>
+      <span class="qr_map_pyzhyk">
+      <img src="https://gitknu.github.io/HMB/afiles_imgs/qr_map_KNU.png" />
+     </span>
+    </td>
+  </tr>
+  <tr>
+    <td class="main-column">
+      <img src="afiles_imgs/vlasova_a_m.jpg" class="rounded-image">
+      <p title="фахівець із питань чогось неймовірно важливого">Власова Наталія Василівна</p>
+    </td>
+     <td class="else-columns">
+      <p title="фахівець із питань чогось неймовірно важливого">методист I-ї категорії</p>
+    </td>
+    <td class="else-columns">
+              <p><div class="qr_hover"><a href="tel:+38(044)239-32-42">+38(044)239-32-42</a>
+       <span class="qr_phone_pyzhyk">
+      <img src="https://gitknu.github.io/HMB/afiles_imgs/qr_phone_104B.png" />
+     </span></p>
+     </div>
+      <p><div class="qr_hover"><a href="mailto:mail@knu.ua">mail@knu.ua</a>
+       <span class="qr_mail_pyzhyk">
+      <img src="https://gitknu.github.io/HMB/afiles_imgs/qr_mail_vlasova.png" />
+     </span></p>
+    </td>
+    <td class="else-columns" style="width:27%;">
+      <div class="qr_hover"><p>кабінет 104-Б</p>
+      <p>(Головний корпус)</p>
+      <span class="qr_map_pyzhyk">
+      <img src="https://gitknu.github.io/HMB/afiles_imgs/qr_map_KNU.png" />
+     </span>
+    </td>
+  </tr>
+  <tr>
+    <td class="main-column">
+      <img src="afiles_imgs/soloviova_a_m.jpg" class="rounded-image">
+      <p title="фахівець із питань чогось неймовірно важливого">Соловйова Ірина Вікторівна</p>
+    </td>
+     <td class="else-columns">
+      <p title="фахівець із питань чогось неймовірно важливого">методист вищої категорії</p>
+    </td>
+    <td class="else-columns">
+              <p><div class="qr_hover"><a href="tel:+38(044)239-33-01">+38(044)239-33-01</a>
+       <span class="qr_phone_pyzhyk">
+      <img src="https://gitknu.github.io/HMB/afiles_imgs/qr_phone_318.png" />
+     </span></p>
+     </div>
+      <p><div class="qr_hover"><a href="mailto:isoloviova@ukr.net">isoloviova@ukr.net</a>
+       <span class="qr_mail_pyzhyk">
+      <img src="https://gitknu.github.io/HMB/afiles_imgs/qr_mail_solov.png" />
+     </span></p>
+    </td>
+    <td class="else-columns" style="width:27%;">
+      <div class="qr_hover"><p>кабінет 319</p>
+      <p>(Головний корпус)</p>
+      <span class="qr_map_pyzhyk">
+      <img src="https://gitknu.github.io/HMB/afiles_imgs/qr_map_KNU.png" />
+     </span>
+    </td>
+  </tr>
+  <tr>
+    <td class="main-column">
+      <img src="afiles_imgs/churiumova_a_m.jpg" class="rounded-image">
+      <p title="фахівець із питань чогось неймовірно важливого">Чурюмова Тетяна Климівна</p>
+ </td>
+     <td class="else-columns">
+      <p title="фахівець із питань чогось неймовірно важливого">методист вищої категорії</p>
+    </td>
+     <td class="else-columns">
+               <p><div class="qr_hover"><a href="tel:+38(044)239-34-42">+38(044)239-34-42</a>
+       <span class="qr_phone_pyzhyk">
+      <img src="https://gitknu.github.io/HMB/afiles_imgs/qr_phone_104A.png" />
+     </span></p>
+     </div>
+      <p><div class="qr_hover"><a href="mailto:mail@knu.ua">mail@knu.ua</a>
+       <span class="qr_mail_pyzhyk">
+      <img src="https://gitknu.github.io/HMB/afiles_imgs/qr_mail_churium.png" />
+     </span></p>
+    </td>
+    <td class="else-columns" style="width:27%;">
+      <div class="qr_hover"><p>кабінет 104-А</p>
+      <p>(Головний корпус)</p>
+      <span class="qr_map_pyzhyk">
+      <img src="https://gitknu.github.io/HMB/afiles_imgs/qr_map_KNU.png" />
+     </span>
+    </td>
+  </tr>
+  <tr>
+    <td class="main-column">
+      <img src="afiles_imgs/kravchenkp_a_m.jpg" class="rounded-image">
+      <p title="фахівець із питань чогось неймовірно важливого">Кравченко Катерина Василівна</p>
+    </td>
+     <td class="else-columns">
+      <p title="фахівець із питань чогось неймовірно важливого">методист I-ї категорії</p>
+    </td>
+    <td class="else-columns">
+                     <p><div class="qr_hover"><a href="tel:+38(044)239-33-01">+38(044)239-33-01</a>
+       <span class="qr_phone_pyzhyk">
+      <img src="https://gitknu.github.io/HMB/afiles_imgs/qr_phone_318.png" />
+     </span></p>
+     </div>
+      <p><div class="qr_hover"><a href="mailto:kateryna.kravchenko@knu.ua">kateryna.kravchenko@knu.ua</a>
+       <span class="qr_mail_pyzhyk">
+      <img src="https://gitknu.github.io/HMB/afiles_imgs/qr_mail_kravch.png" />
+     </span></p>
+    </td>
+    <td class="else-columns" style="width:27%;">
+      <div class="qr_hover"><p>кабінет 318</p>
+      <p>(Головний корпус)</p>
+      <span class="qr_map_pyzhyk">
+      <img src="https://gitknu.github.io/HMB/afiles_imgs/qr_map_KNU.png" />
+     </span>
+    </td>
+  </tr>
+  <tr>
+    <td class="main-column">
+      <img src="afiles_imgs/rudzik_a_m.jpg" class="rounded-image">
+      <p title="фахівець із питань чогось неймовірно важливого">Рудзік Лариса Юріївна</p>
+    </td>
+     <td class="else-columns">
+      <p title="фахівець із питань чогось неймовірно важливого">методист I-ї категорії</p>
+    </td>
+    <td class="else-columns">
+                           <p><div class="qr_hover"><a href="tel:+38(044)239-32-42">+38(044)239-32-42</a>
+       <span class="qr_phone_pyzhyk">
+      <img src="https://gitknu.github.io/HMB/afiles_imgs/qr_phone_104B.png" />
+     </span></p>
+     </div>
+      <p><div class="qr_hover"><a href="mailto:lrmetod@ukr.net">lrmetod@ukr.net</a>
+       <span class="qr_mail_pyzhyk">
+      <img src="https://gitknu.github.io/HMB/afiles_imgs/qr_mail_rudzik.png" />
+     </span></p>
+    </td>
+    <td class="else-columns" style="width:27%;">
+      <div class="qr_hover"><p>кабінет 104-Б</p>
+      <p>(Головний корпус)</p>
+      <span class="qr_map_pyzhyk">
+      <img src="https://gitknu.github.io/HMB/afiles_imgs/qr_map_KNU.png" />
+     </span>
+    </td>
+  </tr>
+  <tr>
+    <td class="main-column">
+<p><a href="https://gitknu.github.io/HMB/afiles_imgs/contacts_beta.pdf">Завантажити контакти 💾</a></p>
+    </td>
+  </tr>
+</table>
 <table>
 <tr>
 <th>
@@ -690,7 +751,6 @@ body {
 </p>
 <p><a href="https://t.me/HMB">Телеграм 📱</a></p>
 <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeAefWeYZ6GHNTDMrICDKgmo6gLRU-uK0KS0b78NW_ETrskFQ/viewform">Відгук ✅</a></p>
-<p><a href="https://gitknu.github.io/HMB#anchor_contacts">👉 Контакти 👈</a></p>
 </th>
 </tr>
 </table>
@@ -736,7 +796,6 @@ function myFunction() {
     }
   </script>
 
-    </div>
     </div>
 </body>
 
